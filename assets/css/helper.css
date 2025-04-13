@@ -1,0 +1,44 @@
+.rounded {
+	border-radius: 5px 5px 5px 5px;
+}
+.min-width {
+	min-width: 740px;
+}
+.default-width {
+	width: 756px !important;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.auto-cell {
+	width: 1px;
+}
+.table-caption {
+	display: block;
+	min-height: 36px;
+	padding: 5px;
+	vertical-align: middle;
+}
+.title {
+}
+.col-left {
+	background-color: #CADFE3;
+	border-left: 1px dotted #41727A;
+	width: 356px !important;
+}
+.pdf-width {
+	width: 1000px;
+}
+.descripton-pdf {
+	display: block;
+	width: 100%;
+}
+.ocultar {
+	display: none;
+}

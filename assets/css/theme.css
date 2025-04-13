@@ -1,0 +1,432 @@
+@charset "utf-8";
+/* CSS Document */
+
+.login-wrapper {
+	margin: 19px auto;
+	width: 345px;
+}
+.title-wrapper {
+	height: 3em;
+	position: relative;
+}
+.title-wrapper h1 {
+	background: none repeat scroll 0 0 #347998;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 1px 1px 2px #7D7D7D;
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: normal;
+	margin-top: -11px;
+	padding: 10px;
+	position: absolute;
+}
+.quick-menu-wrapper {
+	background: none repeat scroll 0 0 #357999;
+	border-radius: 20px 20px 20px 20px;
+	left: -25px;
+	padding: 10px 10px 10px 30px;
+	position: absolute;
+	top: 150px;
+	width: 31px;
+	z-index: 1000;
+}
+.quick-menu-wrapper hr {
+	border-bottom: 1px solid #5190AE;
+	border-top: 1px solid #65A1BE;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.quick-menu-wrapper a {
+	background-image: url("../files/sprite-quick-menu.png");
+	background-repeat: no-repeat;
+	display: block;
+	height: 37px;
+	width: 31px;
+}
+.quick-menu-wrapper a.opcoes {
+	background-position: 0 0;
+}
+.quick-menu-wrapper a.opcoes:hover {
+	background-position: -31px 0;
+}
+.quick-menu-wrapper a.ajuda {
+	background-position: 0 -37px;
+}
+.quick-menu-wrapper a.ajuda:hover {
+	background-position: -31px -37px;
+}
+.header-wrapper {
+	margin-bottom: 40px;
+	position: relative;
+}
+.header-wrapper .identity {
+	background: url("../files/bg-identity.png") no-repeat scroll 0 0 transparent;
+	height: 79px;
+	width: 366px;
+}
+.header-wrapper .logo {
+	left: 10px;
+	position: absolute;
+	top: 28px;
+}
+.header-wrapper .logo a {
+	background: url("../files/logo-cnpq.png") no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 41px;
+	width: 279px;
+}
+.header-wrapper .identity img {
+	margin-left: 114px;
+	margin-right: auto;
+	margin-top: 17px;
+	width: 141px;
+}
+.header-wrapper .bt-login {
+	position: absolute;
+	right: 15px;
+	top: 3px;
+}
+.menu-wrapper {
+	bottom: 0;
+	color: #559DBF;
+	display: block;
+	font-size: 13px;
+	padding-bottom: 2px;
+	padding-left: 34px;
+	padding-top: 8px;
+	position: absolute;
+	right: 15px;
+	top: 77px;
+}
+.menu-wrapper .user-id {
+	background: url("../files/ico-usuario.png") no-repeat scroll 0 3px transparent;
+	bottom: 0;
+	font-size: 13px;
+	padding-bottom: 2px;
+	padding-left: 34px;
+	padding-top: 8px;
+	text-decoration: none;
+}
+.flow-wrapper {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.flow-wrapper .flow {
+	background: #F4F4F4;
+	border: 1px solid #CDCDCD;
+	border-radius: 5px 5px 5px 5px;
+	text-align: left;
+	display: inline-block;
+	padding-right: 5px;
+	margin-left: -15px;
+}
+.flow-wrapper .flow a,
+.flow-wrapper .flow > span {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 28px;
+	position: relative;
+	text-decoration: none;
+	margin-right: -4px;
+	color: #666;
+}
+
+
+/*
+.flow-wrapper .flow a:after,
+.flow-wrapper .flow a:before,
+.flow-wrapper .flow > span:after,
+.flow-wrapper .flow > span:before {
+	left: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.flow-wrapper .flow a:after,
+.flow-wrapper .flow > span:after {
+	border-color: rgba(244, 244, 244, 0);
+	border-left-color: #f4f4f4;
+	border-width: 15px;
+	top: 50%;
+	margin-top: -15px;
+}
+.flow-wrapper .flow a:before,
+.flow-wrapper .flow > span:before {
+	border-color: rgba(204, 204, 204, 0);
+	border-left-color: #ccc;
+	border-width: 16px;
+	top: 50%;
+	margin-top: -16px;
+}
+
+.flow-wrapper .flow a.selected:after,
+.flow-wrapper .flow a.selected.hover:after,
+.flow-wrapper .flow a.selected:hover:after {
+	border-left-color: #1F9BE1;
+}
+.flow-wrapper .flow a.naviPasso0:after,
+.flow-wrapper .flow a.naviPasso0.hover:after,
+.flow-wrapper .flow a.naviPasso0:hover:after {
+	border-left-color: #00CC99;
+}
+.flow-wrapper .flow a.hover:after,
+.flow-wrapper .flow a:hover:after {
+	border-left-color: #61B9E9;
+}
+*/
+
+
+
+
+
+.flow-wrapper .flow a span,
+.flow-wrapper .flow span span {
+	display: inline-block;
+	height: 30px;
+	padding: 0 10px 0 24px;
+}
+.flow-wrapper .flow a.selected span,
+.flow-wrapper .flow a.selected.hover span,
+.flow-wrapper .flow a.selected:hover span {
+	color: #fff;
+}
+.flow-wrapper .flow > *:first-child span {
+	padding-left: 15px !important;
+}
+
+.flow-wrapper .flow a .seta,
+.flow-wrapper .flow > span .seta,
+.flow-wrapper .flow a .seta-fundo,
+.flow-wrapper .flow span .seta-fundo {
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #F4F4F4;
+	border-top: 15px solid transparent;
+	display: inline-block;
+	height: 0;
+	position: absolute;
+	width: 0;
+	right: -14px;
+	z-index: 3;
+	color: #F4F4F4;
+}
+.flow-wrapper .flow a .seta-fundo,
+.flow-wrapper .flow span .seta-fundo {
+	border-left-color: #CDCDCD;
+	right: -15px;
+	z-index: 2;
+}
+
+.flow-wrapper .flow a.selected,
+.flow-wrapper .flow a.selected.hover,
+.flow-wrapper .flow a.selected:hover {
+	background: #1F9BE1;
+}
+.flow-wrapper .flow a.naviPasso0,
+.flow-wrapper .flow a.naviPasso0.hover,
+.flow-wrapper .flow a.naviPasso0:hover {
+	background: #00CC99;
+	color: #fff;
+	cursor: default;
+}
+.flow-wrapper .flow a.hover,
+.flow-wrapper .flow a:hover {
+	background: #61B9E9;
+	color: #fff;
+}
+
+.flow-wrapper .flow a.selected .seta,
+.flow-wrapper .flow a.selected.hover .seta,
+.flow-wrapper .flow a.selected:hover .seta {
+	border-left-color: #1F9BE1;
+}
+.flow-wrapper .flow a.naviPasso0 .seta,
+.flow-wrapper .flow a.naviPasso0.hover .seta,
+.flow-wrapper .flow a.naviPasso0:hover .seta {
+	border-left-color: #00CC99;
+}
+.flow-wrapper .flow a.hover .seta,
+.flow-wrapper .flow a:hover .seta {
+	border-left-color: #61B9E9;
+}
+
+.content-wrapper {
+	color: #666666;
+	text-align: center;
+}
+.content-wrapper .content {
+	background: none repeat scroll 0 0 #F4F4F4;
+	border: 1px solid #C5D8E6;
+	text-align: left;
+}
+.control-bar-wrapper {
+	padding: 5px;
+	text-align: right;
+}
+.icons {
+	background-image: url("../files/icons-recusos.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 16px;
+	margin-bottom: -3px;
+	margin-left: -5px;
+	margin-right: -5px;
+	width: 26px;
+}
+.ico-eye {
+	background-position: 0 0;
+}
+.ico-p7s {
+	background-position: -52px 0;
+}
+.ico-user {
+	background-position: -182px 0;
+}
+.ico-pdf {
+	background-position: -26px 0;
+}
+.ico-del {
+	background-position: -104px 0;
+}
+.ico-ok {
+	background-position: -78px 0;
+}
+.ico-down {
+	background-position: -130px 0;
+}
+.ico-digt {
+	background-position: -208px 0;
+}
+.ico-digt {
+	background-position: -208px 0;
+}
+.ico-glass {
+	background-position: -234px 0;
+}
+.mini-ico {
+	background-image: url(../files/sprite-icons-bts.gif);
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 15px;
+	margin-left: -7px;
+	margin-right: 5px;
+	margin-top: 0;
+	outline: medium none;
+	vertical-align: middle;
+	width: 14px;
+}
+.mini-ico-cancel {
+	background-position: -140px 0;
+}
+.mini-ico-login {
+	background-position: -168px 0;
+}
+.mini-ico-logoff {
+	background-position: -182px 0;
+}
+.mini-ico-upload {
+	background-position: -98px 0;
+	float: right;
+}
+.mini-ico-home {
+	background-position: -14px 0;
+}
+.mini-ico-down {
+	background-position: -42px 0;
+}
+.mini-ico-list {
+	background-position: -56px 0;
+}
+.mini-ico-right {
+	background-position: -84px 0;
+}
+.mini-ico-sig {
+	background-position: -238px 0;
+}
+.mini-ico-set {
+	background-position: -70px 0;
+}
+.sys-icons {
+	background-image: url("../files/ico-sistema.png");
+	background-position: 0 0;
+	display: block;
+	height: 70px;
+	margin: 18px auto;
+	width: 66px;
+}
+.sys-ico-validar {
+	background-position: 0 0;
+}
+.bts-task:hover .sys-ico-validar {
+	background-position: 0 71px;
+}
+.sys-ico-assinar {
+	background-position: 132px 0;
+}
+.bts-task:hover .sys-ico-assinar {
+	background-position: 132px 71px;
+}
+.sys-ico-tramitar {
+	background-position: 66px 0;
+}
+.bts-task:hover .sys-ico-tramitar {
+	background-position: 66px 71px;
+}
+.line-or {
+	display: block;
+	height: 30px;
+	margin-top: 6px;
+	width: auto;
+}
+.line-or .line {
+	background-color: #CFCFCF;
+	display: block;
+	float: left !important;
+	height: 1px;
+	margin: 4px;
+	width: 151px;
+}
+.line-or span {
+	border: 1px solid #CCCCCC;
+	border-radius: 16px 16px 16px 16px;
+	color: #AAAAAA;
+	display: block;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	height: 14px;
+	margin: -11px auto auto;
+	padding: 5px 7px 5px 4px;
+	text-align: center;
+	width: 14px;
+}
+.lupa-formacao {
+	border: 0 none;
+	display: block;
+	float: right;
+	height: 20px;
+	margin: 0 -17px 0;
+	position: relative;
+	top: -25px;
+	width: 20px;
+	z-index: 9;
+}
+.lupa-formacao img {
+	border: 0 none;
+}
+.lupa-modal {
+	border: 0 none;
+	float: right;
+	height: 20px;
+	margin: 0 4px;
+	position: relative;
+	top: -25px;
+	width: 20px;
+	z-index: 9;
+}
+.input-formacao {
+	padding: 5px 20px 5px 0 !important;
+}

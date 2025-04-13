@@ -1,0 +1,35 @@
+* {margin:0; padding:0;}
+#options {width: 100%; margin:20px auto; text-align:right; color:#9ac1c9}
+#options a {text-decoration:none; color:#9ac1c9}
+#options a:hover {color:#033}
+
+#acc {width: 100%; list-style:none; color:#033; margin:0 auto 40px}
+#acc h3 {width: 100%; border:1px solid #9ac1c9; padding:6px 6px 8px; font-weight:bold; margin-top:5px; cursor:pointer; background:url(files/header.gif)}
+#acc h3:hover {}
+#acc .acc-section {overflow:hidden;}
+
+
+#nested {width: 100%; list-style:none; color:#033; margin-bottom:15px}
+#nested h3 {
+    background: none repeat scroll 0 0 #89ACCB;
+    border: 1px solid #9AC1C9;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 6px 6px 8px;
+    width: 100%;
+}
+#nested h3:hover { background: none repeat scroll 0 0 #89ACCB;
+    border: 1px solid #9AC1C9;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 6px 6px 8px;
+    width: 100%;}
+	
+#nested h3 span{ background:url(../files/sprite-icons-bts.gif) no-repeat -42px 0; width:14px; height:15px; display:block; float:left; margin: 3px 5px 0 0;}
+#nested .acc-section {overflow:hidden; }
+#nested .acc-content {}
+#nested .acc-selected span { background:url(../files/sprite-icons-bts.gif) no-repeat -28px 0; width:14px; height:15px; display:block;}

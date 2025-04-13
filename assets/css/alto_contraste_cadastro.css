@@ -1,0 +1,202 @@
+body.altoContraste {
+    background: #333;
+}
+.altoContraste a {
+	color: #333;
+}
+.altoContraste .flow a {
+	filter: none; /* Firefox 3.5+ */
+	filter: none; /* IE6-9 */
+	-webkit-filter: none; /* Chrome 19+ & Safari 6+ */
+}
+.altoContraste .header {
+    border-bottom: 2px solid #000;
+}
+.altoContraste .logo a {
+    background: url("http://estatico.cnpq.br/files/logo_cnpq_contraste.png") no-repeat scroll 0 0 transparent;
+}
+.altoContraste a {
+    color: #666;
+}
+.altoContraste a:hover {
+    color: #333;
+}
+.altoContraste a.button {
+    color: #fff;
+}
+.altoContraste font,
+.altoContraste .navigation a,
+.altoContraste a.tool.close,
+.altoContraste a.lupa,
+.altoContraste img,
+.altoContraste #imgCaptcha img,
+.altoContraste .input-file-text {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+.altoContraste hr {
+	background-color: #ccc;
+}
+.altoContraste .icons-top-fontMenos {
+	background-position: -198px -22px;
+}
+.altoContraste .icons-top-fontMais {
+	background-position: -176px -22px;
+}
+.altoContraste .icons-top-contraste {
+	background-position: -242px -22px;
+}
+.altoContraste .icons-top-enUK {
+	background-position: -88px -22px;
+}
+.altoContraste .icons-top-ptBR {
+	background-position: -66px -22px;
+}
+.altoContraste .icons-top-help {
+	background-position: -220px -22px;
+}
+.altoContraste .icons-aviso-privado {
+	background-position: -311px -21px;
+}
+.altoContraste  .icons-aviso-help {
+	background-position: -333px -21px;
+}
+.altoContraste .icons-top-fontMenos:hover {
+	background-position: -198px 0;
+}
+.altoContraste .icons-top-fontMais:hover {
+	background-position: -176px 0;
+}
+.altoContraste .icons-top-contraste:hover {
+	background-position: -242px 0;
+}
+.altoContraste .icons-top-enUK:hover {
+	background-position: -88px 0;
+}
+.altoContraste .icons-top-ptBR:hover {
+	background-position: -66px 0;
+}
+.altoContraste .icons-top-help:hover {
+	background-position: -220px 0;
+}
+.altoContraste input[type="text"],
+.altoContraste input[type="password"],
+.altoContraste select, textarea {
+	background-color: #fff;
+	border: 1px solid #999;
+	color: #333;
+}
+.altoContraste select.input-text {
+	background-color: #fff;
+	border: 1px solid #999;
+}
+.altoContraste .fotoCurriculo {
+	border-color: #ccc;
+}
+.altoContraste .title-wrapper .separator {
+    border-bottom: 1px solid;
+    color: #333;
+}
+.altoContraste .button.tab:focus,.altoContraste .control-bar-wrapper .button:focus,.altoContraste .control-bar-wrapper-left .button:focus {
+    background: none repeat scroll 0 0 #333 !important;
+    border: 1px dashed #fff;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+.altoContraste .cadastro {
+    background-color: #fff;
+    box-shadow: 0 0 4px #eee inset;
+}
+.altoContraste .cadastro div,
+.altoContraste .cadastro h1,
+.altoContraste .cadastro legend,
+.altoContraste .cadastro label {
+	color: #333;	
+}
+.altoContraste .cadastro a.button {
+    background-color: #000;
+    color: #FFF;
+}
+.altoContraste .cadastro a.button:hover {
+    background-color: #333;
+}
+.altoContraste .cadastro .radios {
+	background-color: #000;
+	color: #fff;
+}
+.altoContraste .cadastro .radios label {
+	color: #fff;
+}
+.altoContraste :-moz-ui-invalid:not(output) {
+    box-shadow: 0 0 1.5px 1px #000;
+}
+.altoContraste .inputError {
+    background-color: #fff;
+    box-shadow: 0 0 1px #000, 0 0 3px #000 !important;
+}
+/* Passos */
+.altoContraste .flow-wrapper .flow a.selected,
+.altoContraste .flow-wrapper .flow a.selected.hover,
+.altoContraste .flow-wrapper .flow a.selected:hover {
+    background: #555;
+	color: #fff;
+}
+.altoContraste .flow-wrapper .flow a.naviPasso0,
+.altoContraste .flow-wrapper .flow a.naviPasso0.hover,
+.altoContraste .flow-wrapper .flow a.naviPasso0:hover {
+	background: #333;
+	color: #fff;
+
+}
+.altoContraste .flow-wrapper .flow a.hover,
+.altoContraste .flow-wrapper .flow a:hover {
+    background: #777;
+	color: #fff;
+}
+.altoContraste .flow-wrapper .flow a.selected .seta,
+.altoContraste .flow-wrapper .flow a.selected.hover .seta,
+.altoContraste .flow-wrapper .flow a.selected:hover .seta {
+	border-left-color: #555;
+}
+.altoContraste .flow-wrapper .flow a.naviPasso0 .seta,
+.altoContraste .flow-wrapper .flow a.naviPasso0.hover .seta,
+.altoContraste .flow-wrapper .flow a.naviPasso0:hover .seta {
+	border-left-color: #333;
+}
+.altoContraste .flow-wrapper .flow a.hover .seta,
+.altoContraste .flow-wrapper .flow a:hover .seta {
+	border-left-color: #777;
+}
+/* fim - Passos */
+/* Modais */
+.altoContraste div.win-wrapper {
+    background-color: #eee;
+}
+.altoContraste div.win-wrapper div.win-content {
+    border-color: #999;
+}
+.altoContraste div.win-content a {
+	color: #333;
+}
+.altoContraste div.win-wrapper div.win-title {
+    color: #666;
+}
+.altoContraste div.win-wrapper td.aviso {
+    background-color: #eee;
+}
+.altoContraste .ano {
+    color: #666;
+}
+.altoContraste .agrupadorsub {
+    color: #666;
+}
+.altoContraste div.win-wrapper td[bgcolor] {
+	background: #000 !important;
+	color: #fff;
+}
+.altoContraste div.win-wrapper td[bgcolor] *:not(img) {
+	color: #fff;
+	filter: none;
+}
+/* fim - Modais */

@@ -1,0 +1,572 @@
+div.tree-wrapper {
+    font: 10px verdana;
+    overflow: auto;
+    position: relative;
+}
+div.tree-wrapper ul {
+    font: 11px arial;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+div.tree-wrapper ul ul {
+    padding-left: 18px;
+}
+div.tree-wrapper ul li {
+    padding: 2px 0;
+}
+div.tree-wrapper ul a.icon {
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin-right: 3px;
+    outline: 0 none;
+    position: relative;
+    top: 3px;
+    width: 15px;
+}
+div.tree-wrapper ul a.plus {
+    background: url("../files/tree-plus.png") no-repeat scroll 50% 50% transparent;
+}
+div.tree-wrapper ul a.minus {
+    background: url("../files/tree-minus.png") no-repeat scroll 50% 50% transparent;
+}
+div.tree-wrapper ul a.closed {
+    background: url("../files/tree-closed.png") no-repeat scroll 50% 50% transparent;
+}
+div.tree-wrapper ul a.opened {
+    background: url("../files/tree-opened.png") no-repeat scroll 50% 50% transparent;
+}
+div.tree-wrapper ul a.item {
+    background: url("../files/tree-item.png") no-repeat scroll 50% 50% transparent;
+}
+div.tree-wrapper ul a.label {
+    color: #000000;
+    text-decoration: none;
+}
+div.tree-wrapper ul a.label:hover {
+    text-decoration: underline;
+}
+div.tree-wrapper ul a.match {
+    background: none repeat scroll 0 0 #3A80F3;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    padding: 1px 2px;
+}
+div.tree-wrapper ul a.selected {
+    background: none repeat scroll 0 0 #F7BE77;
+    border: 1px dashed #000000;
+    color: #000000;
+    padding: 1px 2px;
+}
+div.tree-wrapper ul a.marked {
+    color: #FF0000;
+    font-weight: bold;
+}
+div.tree-wrapper ul span.spacer {
+    display: inline-block;
+    height: 100%;
+}
+div.suggest-wrapper {
+    display: inline-block;
+    white-space: nowrap;
+}
+div.suggest-wrapper input {
+    width: 100%;
+}
+div.suggest-wrapper div.suggest-list {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+}
+div.suggest-wrapper div.suggest-list h1, div.suggest-wrapper div.suggest-list h2, div.suggest-wrapper div.suggest-list h3, div.suggest-wrapper div.suggest-list h4 {
+    background: none repeat scroll 0 0 #D2E4FA;
+    display: none;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    width: auto;
+}
+div.suggest-wrapper div.suggest-list h1 {
+    margin: 0 4px;
+}
+div.suggest-wrapper div.suggest-list h2 {
+    margin: 0 2px;
+}
+div.suggest-wrapper div.suggest-list h3 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 2px;
+    margin: 0 1px;
+}
+div.suggest-wrapper div.suggest-list div.suggest-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #333333;
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    padding: 3px;
+}
+div.suggest-wrapper div.suggest-list div.suggest-content a {
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    font: 11px arial;
+    padding: 2px 5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+div.suggest-wrapper div.suggest-list div.suggest-content a.selected {
+    background: none repeat scroll 0 0 #00529B;
+    color: #FFFFFF;
+}
+div.panel-wrapper {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #00598D;
+    margin-bottom: 5px;
+}
+div.panel-wrapper:last-child {
+    margin-bottom: 0;
+}
+div.panel-wrapper div.panel-header {
+    background: none repeat scroll 0 0 #DDE8F4;
+    border-bottom: 1px solid #CCCCCC;
+    color: #15428B;
+    font: bold 10px/20px verdana;
+    height: 20px;
+    text-indent: 5px;
+}
+div.panel-wrapper div.panel-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font: 10px verdana;
+    margin: 3px;
+}
+div.panel-wrapper div.panel-pad {
+    padding: 5px;
+}
+div.panel-wrapper div.panel-top-bar {
+    color: #333333;
+    font: 11px arial;
+    margin: 3px;
+    padding: 5px;
+}
+div.panel-wrapper div.panel-bottom-bar {
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    font: 11px arial;
+    height: 20px;
+    margin: 3px;
+    padding: 2px 0;
+}
+div.panel-wrapper div.panel-bottom-bar > * {
+    float: left;
+    margin-left: 5px;
+}
+div.panel-wrapper div.panel-bottom-bar div {
+    height: 100%;
+    line-height: 175%;
+}
+div.panel-wrapper div.panel-bottom-bar a {
+    color: #888888;
+    font-weight: bold;
+    height: 100%;
+    line-height: 175%;
+    padding: 0 3px;
+    text-decoration: none;
+}
+div.panel-wrapper div.panel-bottom-bar a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+div.panel-wrapper div.panel-bottom-bar span.splitter {
+    background: none repeat scroll 0 0 #CCCCCC;
+    display: block;
+    height: 100%;
+    width: 2px;
+}
+div.grid-wrapper {
+    border: 1px solid #99BBE8;
+}
+div.grid-wrapper div.grid-header {
+    background: url("../files/grid-hrow.png") repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #99BBE8;
+}
+div.grid-wrapper div.grid-content {
+    overflow: auto;
+}
+div.grid-wrapper table {
+    color: #333333;
+    font: 11px arial;
+    table-layout: fixed;
+    text-align: left;
+    width: 100%;
+}
+div.grid-wrapper table th {
+    background: url("../files/grid-hrow.png") repeat scroll 0 0 transparent;
+    border-right: 1px solid #99BBE8;
+    height: 20px;
+    padding: 0;
+    text-align: left;
+    text-indent: 5px;
+}
+div.grid-wrapper table th.last {
+    border-right: 0 none;
+}
+div.grid-wrapper table td {
+    border-bottom: 1px solid #EDEDED;
+    border-top: 1px solid #FFFFFF;
+    height: 22px;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+}
+div.grid-wrapper table tr {
+    cursor: pointer;
+}
+div.grid-wrapper table tr.odd td {
+    background: none repeat scroll 0 0 #FAFAFA;
+}
+div.grid-wrapper table tr.hover td {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+}
+div.grid-wrapper table tr.selected td {
+    background: none repeat scroll 0 0 #DFE8F6;
+    border-bottom: 1px dotted #A3BAE9;
+    border-top: 1px dotted #A3BAE9;
+}
+div.grid-wrapper table td.hidden * {
+    visibility: hidden;
+}
+div.grid-wrapper table tr.hover td.hidden *, div.grid-wrapper table tr.selected td.hidden * {
+    visibility: visible;
+}
+div.grid-wrapper table div.cell-wrapper {
+    margin: 0 0 0 5px;
+    overflow: hidden;
+}
+div.grid-wrapper table img {
+    margin-left: 2px;
+    vertical-align: -35%;
+}
+div.grid-wrapper input[type="text"] {
+    border: 1px solid #CCCCCC;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+div.win-overlay {
+    background: none repeat scroll 0 0 #CCCCCC;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+div.win-wrapper {
+    background: none repeat scroll 0 0 #E1EAF2;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 3px #444444;
+    padding: 6px;
+    position: absolute;
+    width: auto;
+    z-index: 100;
+}
+div.win-wrapper table.win-holder {
+    border-collapse: collapse;
+    width: auto;
+}
+div.win-wrapper table.win-holder tr.win-top > td, div.win-wrapper table.win-holder tr.win-mid > td, div.win-wrapper table.win-holder tr.win-bottom > td {
+    margin: 0;
+    padding: 0;
+}
+div.win-wrapper table.win-holder tr.win-top td {
+    height: 3px;
+    overflow: hidden;
+}
+div.win-wrapper table.win-holder tr.win-top td.win-top-left {
+    background: none repeat scroll 0 0 transparent;
+    width: 3px;
+}
+div.win-wrapper table.win-holder tr.win-top td.win-top-right {
+    background: none repeat scroll -3px 0 transparent;
+    width: 3px;
+}
+div.win-wrapper table.win-holder tr.win-top td.win-top-center {
+    background: none repeat scroll 0 0 transparent;
+}
+div.win-wrapper table.win-holder tr.win-mid td {
+    height: auto;
+    overflow: hidden;
+}
+div.win-wrapper table.win-holder tr.win-mid td.win-mid-left {
+    background: none repeat-y scroll 0 0 transparent;
+    width: 3px;
+}
+div.win-wrapper table.win-holder tr.win-mid td.win-mid-right {
+    background: none repeat-y scroll -3px 0 transparent;
+    width: 3px;
+}
+div.win-wrapper table.win-holder tr.win-mid td.win-mid-center {
+    background: none repeat scroll 0 0 transparent;
+}
+div.win-wrapper table.win-holder tr.win-bottom td {
+    height: 3px;
+    overflow: hidden;
+}
+div.win-wrapper table.win-holder tr.win-bottom td.win-bottom-left {
+    background: none repeat scroll 0 -3px transparent;
+    width: 3px;
+}
+div.win-wrapper table.win-holder tr.win-bottom td.win-bottom-right {
+    background: none repeat scroll -3px -3px transparent;
+    width: 3px;
+}
+div.win-wrapper table.win-holder tr.win-bottom td.win-bottom-center {
+    background: none repeat scroll 0 -3px transparent;
+}
+div.win-wrapper div.win-header {
+    cursor: move;
+    height: 20px;
+    overflow: hidden;
+}
+div.win-wrapper div.win-tools {
+    float: right;
+    margin: 2px 2px 0 0;
+}
+div.win-wrapper div.win-title {
+    color: #15428B;
+    float: left;
+    font: bold 11px/16px verdana;
+    overflow: hidden;
+    text-indent: 4px;
+}
+div.win-wrapper div.win-title img {
+    height: 18px;
+    margin-right: 3px;
+    vertical-align: bottom;
+}
+div.win-wrapper div.win-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #88A0BE;
+    font: 10px verdana;
+    overflow: auto;
+}
+div.win-wrapper div.win-pad {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 2px;
+    overflow: auto;
+    padding: 3px;
+}
+div.win-wrapper div.win-bottom-bar {
+    padding: 6px 0 4px;
+}
+div.win-wrapper div.win-bottom-bar span.botao {
+    margin: 0 3px;
+}
+div.win-wrapper a.tool {
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    width: 15px;
+}
+div.win-wrapper a.close {
+    background: url("../files/tool-sprites.gif") no-repeat scroll 0 0 transparent;
+}
+div.win-wrapper a.close:hover {
+    background: url("../files/tool-sprites.gif") no-repeat scroll -15px 0 transparent;
+}
+div.win-wrapper ul.alert {
+    background: url("../files/alert.png") no-repeat scroll 15px 50% transparent;
+    min-height: 50px;
+    padding: 0 10px 0 100px;
+}
+div.win-wrapper ul.alert li {
+    line-height: 18px;
+}
+div.win-wrapper ul.error {
+    background: url("../files/error.png") no-repeat scroll 15px 50% transparent;
+    min-height: 50px;
+    padding: 0 10px 0 100px;
+}
+div.win-wrapper ul.error li {
+    line-height: 18px;
+}
+div.win-wrapper ul.success {
+    background: url("../files/success.png") no-repeat scroll 15px 50% transparent;
+    min-height: 50px;
+    padding: 0 10px 0 100px;
+}
+div.win-wrapper ul.success li {
+    line-height: 18px;
+}
+div.win-wrapper ul.question {
+    background: url("../files/question.png") no-repeat scroll 15px 50% transparent;
+    min-height: 50px;
+    padding: 0 10px 0 100px;
+}
+div.win-wrapper ul.question li {
+    line-height: 18px;
+}
+div.win-wrapper div.center {
+    padding: 25px 0;
+    text-align: center;
+}
+div.tab-wrapper {
+    background: none repeat scroll 0 0 #D0DDF1;
+}
+div.tab-wrapper div.tab-header {
+    background: url("../files/tab-header.png") repeat-x scroll 0 100% transparent;
+    height: 25px;
+    overflow: hidden;
+    padding: 2px 0 0 2px;
+}
+div.tab-wrapper div.tab-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+div.tab-wrapper div.tab {
+    padding: 3px;
+}
+div.tab-wrapper div.tab-header a {
+    outline: 0 none;
+}
+div.tab-wrapper span.active-tab {
+    background: url("../files/tab-left-active.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 22px;
+    margin-right: 2px;
+    white-space: nowrap;
+}
+div.tab-wrapper span.active-tab a {
+    color: #15428B;
+    display: block;
+    font: bold 11px/22px arial;
+    height: 100%;
+    padding-left: 10px;
+    text-decoration: none;
+}
+div.tab-wrapper span.active-tab a span {
+    background: url("../files/tab-right-active.png") no-repeat scroll 100% 0 transparent;
+    display: block;
+    height: 100%;
+    padding-right: 10px;
+}
+div.tab-wrapper span.inactive-tab {
+    background: url("../files/tab-left-inactive.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 21px;
+    margin-right: 2px;
+    white-space: nowrap;
+}
+div.tab-wrapper span.inactive-tab a {
+    color: #15428B;
+    display: block;
+    font: 11px/22px arial;
+    height: 100%;
+    padding-left: 10px;
+    text-decoration: none;
+}
+div.tab-wrapper span.inactive-tab a span {
+    background: url("../files/tab-right-inactive.png") no-repeat scroll 100% 0 transparent;
+    display: block;
+    height: 100%;
+    padding-right: 10px;
+}
+div.tab-wrapper span.inactive-tab a:hover {
+    text-decoration: underline;
+}
+span.button-wrapper {
+    background: url("../files/botao-left.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 23px;
+    white-space: nowrap;
+}
+span.button-wrapper a {
+    color: #000000;
+    display: inline-block;
+    font: 12px/22px verdana;
+    height: 100%;
+    padding-left: 10px;
+    text-decoration: none;
+}
+span.button-wrapper span.button-content {
+    background: url("../files/botao-right.png") no-repeat scroll 100% 0 transparent;
+    display: inline-block;
+    height: 100%;
+    padding-right: 10px;
+}
+span.button-wrapper a:link {
+    color: #000000;
+    text-decoration: none;
+}
+span.button-wrapper a:visited {
+    color: #0066FF;
+    text-decoration: none;
+}
+span.button-wrapper a:hover {
+    color: #666666;
+    text-decoration: none;
+}
+span.button-wrapper a:active {
+    color: #999999;
+    text-decoration: none;
+}
+/*span.botao {
+    background: url("../files/botao-left.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+span.botao a {
+    color: #2D6281;
+    cursor: pointer;
+    display: block;
+    font: bold 13px/24px arial;
+    height: 100%;
+    padding-left: 10px;
+    text-decoration: none;
+}
+span.botao a:link {
+    color: #000000;
+    text-decoration: none;
+}
+span.botao a:visited {
+    color: #0066FF;
+    text-decoration: none;
+}
+span.botao a:hover {
+    color: #666666;
+    text-decoration: none;
+}
+span.botao a:active {
+    color: #999999;
+    text-decoration: none;
+}
+span.botao span {
+    background: url("../files/botao-right.png") no-repeat scroll 101% 0 transparent;
+    display: block;
+    height: 100%;
+    margin-right: 3px;
+    padding-right: 10px;
+}
+span.botao a.check {
+    background: url("../files/botao-check.png") no-repeat scroll 5px 50% transparent;
+    padding-left: 30px;
+}
+span.botao a.cancel {
+    background: url("../files/botao-cancel.png") no-repeat scroll 5px 50% transparent;
+    padding-left: 26px;
+}*/
+* html span.botao {
+    display: inline;
+    width: 1px;
+}
+* html span.botao a:hover {
+    color: #2D6281;
+}
