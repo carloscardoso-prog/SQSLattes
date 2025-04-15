@@ -6,7 +6,11 @@ $directory = str_replace(basename(__FILE__), '', $directory);
 <!DOCTYPE HTML>
 <html>
 
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Cadastro - Currículo Lattes
         - Para uma melhor experiência, mantenha seu navegador e leitor de tela atualizados.</title>
@@ -393,7 +397,7 @@ $directory = str_replace(basename(__FILE__), '', $directory);
                             <h2>CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico</h2>
                         </a>
                     </div>
-                    <h3><span class="yellow-bg">#StandWith</span><span class="blue-bg">Ukraine</span></h3>
+                    <h3><span class="yellow-bg">#Sem</span><span class="green-bg">Anistia</span></h3>
                 </div>
             </div>
         </div>
@@ -671,14 +675,14 @@ $directory = str_replace(basename(__FILE__), '', $directory);
                             <div class="layout-cell-pad">
                                 <label for="femail" class="tit_form">E-mail</label>
                                 <div class="sub_tit_form">Digite aqui seu e-mail</div>
-                                <input id="femail" type="text" name="femail" validate="true" required="Campo Email Obrigatório Não informado" placeholder="BrazilGovLeaksData@proton.me" email="Campo E-mail deve ser válido" onkeyup="formatacao.minusculo(this)" onblur="formatacao.minusculo(this);trimGeral(this)">
+                                <input id="femail" type="text" name="femail" validate="true" required="Campo Email Obrigatório Não informado" placeholder="exemplo@protonmail.com" email="Campo E-mail deve ser válido" onkeyup="formatacao.minusculo(this)" onblur="formatacao.minusculo(this);trimGeral(this)">
                             </div>
                         </div>
                         <div class="colun_form layout-cell-6">
                             <div class="layout-cell-pad">
                                 <label for="fconfemail" class="tit_form">Confirme o e-mail</label>
                                 <div class="sub_tit_form">Digite seu e-mail novamente para confirmação dos dados</div>
-                                <input id="fconfemail" type="text" name="fconfemail" validate="true" required="Campo Confirme E-mail Obrigatório Não informado" placeholder="BrazilGovLeaksData@proton.me" equal="Campo Confirme o E-mail deve ser igual ao E-mail" maxlength="70">
+                                <input id="fconfemail" type="text" name="fconfemail" validate="true" required="Campo Confirme E-mail Obrigatório Não informado" placeholder="exemplo@protonmail.com" equal="Campo Confirme o E-mail deve ser igual ao E-mail" maxlength="70">
                             </div>
                         </div>
                         <div class="clear"></div>

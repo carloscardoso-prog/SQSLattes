@@ -40,11 +40,11 @@ fieldset {
 }
 .yellow-bg {
 	background-color: yellow;
-	color: rgb(66, 66, 66);
+	color: blue;
 }
-.blue-bg{
-	background-color: blue;
-	color: rgb(212, 212, 212);
+.green-bg{
+	background-color: green;
+	color: blue;
 }
 .max-width {
 	max-width: 1024px;
