@@ -1,0 +1,269 @@
+/*@import url("cv_cabecalho.css");*/
+/*@import url("cv_container.css");*/
+/*@import url("cv_ferramentas.css");*/
+/*@import url("cv_mensagem.css");*/
+/*@import url("cv_menu.css");*/
+/*@import url("cv_modal.css");*/
+/*@import url("cv_navegacao.css");*/
+
+
+@import url("cv_grid.css");
+@import url("cv_lista.css"); 
+@import url("cv_pendencias.css");
+@import url("cv_correcao_lupa.css");
+@import url("alto_contraste_principal.css");
+
+
+
+/* padrao */
+
+html, body  {
+	height:100%;
+	width:100%;
+}
+html {
+	overflow:hidden;
+}
+body {
+	margin:0;
+}
+/* barra aviso */
+
+.barraAviso {
+	background:url(../files/ico_exclamacao.gif) no-repeat 3px 50% #FFFFE1;
+	position:absolute;
+	top:26px;
+	width:100%;
+	border-bottom:2px groove #000;
+	padding:3px 6px 3px 25px;
+	font:normal 11px arial, helvetica, verdana;
+	cursor:pointer
+}
+.barraAviso:hover {
+	background:url(../files/ico_exclamacao.gif) no-repeat 3px 50% #B2B4BF;
+}
+/* form */
+
+select {
+	font:normal 11px arial, helvetica, verdana;
+	border:1px solid #555;
+}
+input[type="text"] {
+	border:1px solid #555;
+	font:normal 11px arial, helvetica, verdana;
+}
+input[disabled] {
+	border:1px solid #aaa;
+	background:#fff;
+	color:#000;
+	font-weight:bold
+}
+input[readonly] {
+	background:#f0f0f0;
+}
+.input-error {
+    background: none repeat scroll 0 0 #FFFFCC !important;
+    border: 1px solid #D21717 !important;
+    border-radius: 4px 4px 4px 4px  !important;
+}
+* html input, * html textarea, * html select {
+	font:normal 11px arial, helvetica, verdana
+}
+.disabled {
+	border:1px solid #aaa;
+	background:#fff;
+	color:#000;
+	font-weight:bold
+}
+/* exceÃ§Ãµes */
+
+.controlePagina {
+	text-align:right;
+	margin-right:8%
+}
+.controlePagina a {
+	text-decoration:none
+}
+.controlePagina img {
+	border:0
+}
+/* overlay */
+.overlayDiv {
+	position:absolute;
+	top:0px;
+	left:0;
+	background:#333;
+	height:100%;
+	width:100%;
+}
+/* panel */
+div.panel {
+	display:block;
+	margin-bottom:10px;
+	border:1px solid #99BBE8;
+	text-align:left
+}
+div.panel .panel-title {
+	height:20px;
+	background:url(../files/title.gif) repeat-x 0 -1px;
+	border-bottom:1px solid #99BBE8;
+	font:bold 11px verdana;
+	line-height:18px;
+	text-indent:5px
+}
+div.panel .panel-body {
+	padding:1px;
+	background:#DFE8F6
+}
+div.panel .panel-control {
+	height:22px;
+	background:url(../files/control-bar.gif);
+	border:1px solid #99BBE8;
+	line-height:18px;
+	margin:1px;
+	padding:0 3px
+}
+div.panel .panel-control input {
+	border:1px solid #99BBE8;
+	background:url(../files/magnifier.png) no-repeat 99% 50% #fff;
+	padding:2px 18px 2px 0;
+	font:normal 10px verdana;
+	width:150px;
+	margin-top:2px
+}
+div.panel .panel-control .splitter {
+	display:block;
+	width:2px;
+	background:url(../files/splitter.gif);
+	height:18px;
+	margin:2px 4px
+}
+div.panel .panel-control .result {
+	float:right
+}
+div.panel .panel-content {
+	border:1px solid #99BBE8;
+	background:#fff;
+	margin:5px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	font:normal 11px arial
+}
+div.panel .panel-content table {
+	width:100%;
+	border-bottom:1px solid #99BBE8;
+	background:#DFE8F6;
+	font:normal 11px arial
+}
+div.panel .panel-content table td {
+	text-align:center
+}
+div.panel .panel-content table td input {
+	font:normal 11px arial;
+	border:1px solid #99BBE8;
+	width:100%
+}
+div.panel .panel-content table td a {
+	font-weight:bold;
+	text-decoration:none
+}
+div.panel .panel-content table td a:hover {
+	text-decoration:underline
+}
+.esconder {
+   display:none;
+}
+.lupa {
+    background: url("../files/lupa.png") no-repeat scroll right center transparent;
+    display: block;
+    float: left;
+    height: 18px;
+    margin: 5px 0 0 -21px;
+    padding: 0;
+    position: relative;
+    right: 0 !important;
+    width: 20px;
+}
+.input-lupa {
+    display: block !important;
+    float: left;
+}
+.fotoCurriculo.ident {
+    border: 1px solid #9FB9D5;
+    border-radius: 4px 4px 4px 4px;
+    height: 99px;
+    margin: 1px 7px 0;
+    overflow: hidden;
+    position: relative;
+    width: 95px;
+}
+.fotoCurriculo.ident .foto {
+    max-width: 95px;
+    border: 0;
+}
+.fotoCurriculo.ident a.up_foto {
+    background: url("../files/ico_alterar_foto.png") no-repeat scroll 0 0 transparent;
+    bottom: 3px;
+    display: block;
+    height: 22px;
+    left: 74px;
+    position: absolute;
+    width: 17px;
+}
+.escondido {
+	position: absolute;
+	left: -9999px;
+}
+.conteudo-cv,
+.resumo-impressao {
+	padding: 20px;
+}
+.conteudo-cv .conteudo-cv {
+	padding-left: 0;
+	padding-right: 0;
+}
+.resumo-impressao ul.inf_list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.resumo-impressao ul.inf_list li  span{
+	display: inline-block;
+	width: 18px;
+}
+/* Icones e tool tip */
+.icons-top {
+	background-image: url("../files/sprite_icons_topo.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	float: left;
+	height: 21px;
+	margin-right: 5px;
+	position: relative;
+	width: 21px;
+}
+
+.icons-aviso {
+	background: url("../files/sprite_icons_topo.png") no-repeat;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	position: relative;
+	margin: -20px 0 0 0;
+}
+.icons-aviso-privado {
+	background-position: -311px 0;
+}
+.icons-aviso-help {
+	background-position: -333px 0;
+}
+.tipsy {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+select[name=fnro_id_raca_cor] {
+	float: left;
+}
+#helpCont0 .ajudaFora {
+	text-indent: -3999px;
+	float: right;
+}

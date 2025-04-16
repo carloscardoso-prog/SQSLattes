@@ -1,0 +1,58 @@
+/* tags */
+body {
+	background: #fff;
+	overflow: auto
+}
+
+em {
+	border-bottom: 1px solid #A6C0D9;
+	color: #326C99;
+	display: inline-block;
+	font-size: 18px;
+	font-style: normal !important;
+	font-weight: normal !important;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-top: -5px !important;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 4px;
+	width: 98%;
+}
+
+input[type="text"],
+select {
+	border-radius: 4px 4px 4px 4px;
+	display: inline;
+	margin: 2px 0 !important;
+	padding: 3px 1px;
+	text-align: center;
+}
+
+/* holder */
+.holder {
+	width: 95%;
+	margin: 5px auto;
+}
+
+.holder .titulo {
+	background: url(../imagens/holder_titulo.jpg) repeat-x;
+	height: 22px;
+	font: bold 11px verdana;
+	line-height: 22px;
+	padding: 0 5px 0 15px;
+}
+
+.holder .titulo a {
+	float: right;
+	margin: 0 5px;
+	font: bold 10px verdana;
+	line-height: 22px
+}
+
+/* classe de controle */
+.pad {
+	padding: 7px 15px;
+	font: normal 11px arial;
+	color: #333
+}

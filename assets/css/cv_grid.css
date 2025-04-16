@@ -1,0 +1,138 @@
+.grid {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:540px;
+	font:normal 11px arial, helvetica, verdana;
+	margin-left:15px
+}
+.grid th {
+	background:url(../imagens/background-filtro.gif);
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	color:#00529b;
+	height:20px;
+	line-height:20px;
+	text-align:left;
+	text-indent:3px
+}
+.grid td, .grid table td {
+	text-indent:5px;
+	white-space:nowrap;
+	overflow:hidden;
+	padding:0px 5px 0px 0;
+}
+.rodapeGrid {
+	background:url(../imagens/background-filtro.gif);
+	height:20px;
+	line-height:20px;
+	text-indent:3px;
+}
+.grid tr {
+	cursor:pointer
+}
+.grid table td {
+	height:20px
+}
+.grid .holder {
+   max-width: 102% !important;
+   min-height: 20px !important;
+   min-width: 98% !important;
+   overflow: auto;
+}
+.grid table {
+	table-layout:fixed;
+	border-collapse:collapse;
+	width:520px;
+	font:normal 11px arial, helvetica, verdana;
+}
+.grid .scrollBar {
+	border:0;
+	background:transparent;
+	width:13px;
+}
+.grid .par td {
+	background:#fff
+}
+.grid .impar td {
+	background:#EAF4FB
+}
+.grid .hover td {
+	background:#E5E5E5
+}
+.grid .selected td {
+	background:#316AC5;
+	color:#fff
+}
+
+.grid span {
+	display:none;
+}
+* html .grid .scrollBar {
+	width:16px
+}
+.divEdicao {
+	background:#eee;
+	border:1px solid #aaa;
+	position:absolute;
+	width:auto;
+	height:18px;
+}
+.divEdicao img {
+	margin:2px;
+	cursor:pointer
+}
+.overlay_grid {
+	position:absolute;
+	background:#fff;
+}
+.botaoAdicionar {
+	cursor:pointer;
+	float:left;
+	margin:-5px 0
+}
+.gridSetaCima {
+	cursor:pointer;
+	margin:7px 6px 0 3px;
+	float:right;
+}
+.gridSetaBaixo {
+	cursor:pointer;
+	margin:3px 3px 0 3px;
+	float:right;
+}
+.botaoAceitar, .botaoCancelar {
+	position:absolute;
+	cursor:pointer;
+}
+.edicaoTable {
+	position:absolute;
+	font:normal 11px arial, helvetica, verdana;
+	border-collapse:collapse;
+	table-layout:fixed
+}
+.edicaoTable td {
+	white-space:nowrap;
+	overflow:hidden;
+	padding:0;
+	height:18px;
+	margin:0;
+	vertical-align:top
+}
+.edicaoTable td input {
+	margin:0;
+	padding:0;
+	width:100%;
+	overflow:hidden;
+	font:normal 11px arial, helvetica, verdana;
+	padding:2px;
+	border:1px solid #aaa
+}
+.edicaoTable td select {
+	margin:0;
+	padding:0;
+	width:100%;
+	overflow:hidden;
+	font:normal 11px arial, helvetica, verdana;
+	padding:1px;
+	border:1px solid #aaa
+}

@@ -240,7 +240,7 @@ $.win = function(p) {
 			win.removeListeners();
 		},
 		fixContentHeight:function() {
-			var viewportHeight = Math.max($("html").height(), $(window).height()),
+			var viewportHeight = $(window).height(),
 				height = (viewportHeight - 80);
 				
 			win._content.css({maxHeight: height});

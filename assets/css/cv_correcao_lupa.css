@@ -1,0 +1,30 @@
+.navegacao fieldset input[name="f_pag_ini"] {
+    width: 196px !important;
+}
+.celulaTabela01 table{
+width: 100% !important;
+}
+input[value="IV Latin American Workshop on Nonlinear Phenomena"] {
+    width: 389px !important;
+}
+.navegacao fieldset input[name="f_titulo_periodico"] {
+    width: 388px !important;
+}
+a[onclick="dominio();return false;"] {
+    display: block;
+    font: 11px arial;
+    position: relative;
+    right: 84px;
+}
+.navegacao fieldset input[type="text"] {
+    border: 1px solid #555555;
+    border-radius: 4px 4px 4px 4px;
+    font: 11px arial,helvetica,verdana;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    max-width: 75%;
+    padding: 4px 2px;
+}
+input[name="f_nme_agencia"], select {
+    max-width: 71% !important;
+}

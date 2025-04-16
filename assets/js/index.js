@@ -1343,7 +1343,33 @@ function recuperaInstMacroEstatico() {
         }
 
         winSeleInst.request("proxy.php?param=" + encodeURIComponent(JSON.stringify(data)));
+        mudarOnClickRecuperaInstMacroEstatico();
+        mudarOnClickOutraInstEstatico();
     }
+}
+
+function mudarOnClickOutraInstEstatico() {
+    waitForObject('form strong a', 'clique aqui').then(el => {
+        el.get(0).setAttribute('onclick', 'outraInstEstatico()');
+    }).catch(err => {
+        console.error(err);
+    });
+}
+
+function outraInstEstatico() {
+    var data = {
+        tipo: 'cadastro_instituicao', url_action: 'CADAST_INST'
+    }
+
+    winCadInst = $.win({
+        url: "proxy.php?param=" + encodeURIComponent(JSON.stringify(data)),
+        loadingMessage: "Carregando conteúdo ....",
+        autoRemove: true,
+        width: 550
+    })
+
+    winCadInst.show();
+    mudarOnClickCheckEstatico();
 }
 
 function seleInstEnd() {
@@ -1366,13 +1392,17 @@ function seleInstEnd() {
             });
             winSeleInst.show();
 
-            waitForObject('#forminst').then(el => {
-                el.find('input[type=button]').get(0).setAttribute('onclick', 'recuperaInstMacroEstatico()');
-            }).catch(err => {
-                console.error(err);
-            });
+            mudarOnClickRecuperaInstMacroEstatico();
         }
     }
+}
+
+function mudarOnClickRecuperaInstMacroEstatico() {
+    waitForObject('#forminst').then(el => {
+        el.find('input[type=button]').get(0).setAttribute('onclick', 'recuperaInstMacroEstatico()');
+    }).catch(err => {
+        console.error(err);
+    });
 }
 
 function getZipData(fcep) {
@@ -1673,5 +1703,99 @@ function waitForObject(selector, timeout = 5000) {
                 reject(new Error(`Timeout: ${selector} not found`));
             }
         }, 100);
+    });
+}
+
+
+dc = document.GN_INST_OUTRA;
+
+function trim(str) {
+    i = 0;
+    while (((str.substring(i, i + 1)) == " ") && (i < str.length))
+        i++;
+    aux = str.substring(i, str.length);
+    i = aux.length;
+    while (((aux.substring(i - 1, i)) == " ") && (i > 1))
+        i--;
+    aux = aux.substring(0, i);
+    return aux;
+}
+
+function cancelar() {
+    return;
+}
+
+function checkpais() {
+    return;
+}
+var isValidCharacters;
+function checkEstatico() {
+    if (trim(document.GN_INST_OUTRA.f_nme_inst.value) == "") {
+        alert("Informe o nome da instituição");
+        document.GN_INST_OUTRA.f_nme_inst.focus();
+
+    } else if (trim(document.GN_INST_OUTRA.f_sigla.value) == "") {
+        alert("Informe a sigla da Instituição");
+        document.GN_INST_OUTRA.f_sigla.focus();
+
+    } else if (document.GN_INST_OUTRA.f_pais_inst.options[document.GN_INST_OUTRA.f_pais_inst.options.selectedIndex].value == "") {
+        alert("Informe o país da instituição");
+        document.GN_INST_OUTRA.f_pais_inst.focus();
+
+    } else {
+        var nome = $(":input[name='f_nme_inst']").val();
+        var sigla = $(":input[name='f_sigla']").val();
+        var pais = $(":input[name='f_pais_inst']").val();
+        var data = {
+            param: {
+                tipo: 'finalizar_cadastro_instituicao',
+                url_action: 'CADAST_INST',
+                dado: {
+                    f_nme_inst: nome,
+                    f_sigla: sigla,
+                    f_pais_inst: pais,
+                    f_cod: "E5531553Z",
+                    f_nivel: "",
+                    f_pgm: "",
+                    f_ctr: "I",
+                    f_agencia: "N",
+                    ftipo: "END",
+                    // bt: "Confirmar",
+                }
+            }
+        }
+        //////// winCadInst.request("proxy.php?param=" + encodeURIComponent(JSON.stringify(data)));
+
+        // var form = $("form#formCadInst"), data = form.serializeArray();
+        // escapeSerializedJSON(data);
+        // console.log(form);
+
+        /* $.ajax({
+           url : "pkg_cv_estr.validate_length_special_charac",
+           dataType : "json",
+           data : {
+             val : $("input[name=f_nme_inst]").val(),
+             length_val : 75
+           },
+           error : function(e) {
+             alert(e + "erro");
+           },
+           success : function(result) {
+             isValidCharacters = result;
+           }
+         });*/
+        //    if(isValidCharacters.success)
+        // winCadInst.request("https://wwws.cnpq.br/cvlattesweb/pkg_cv_estr.CADAST_INST", data, true);
+        winCadInst.request("proxy.php", data, true);
+        //    else
+        //    alert(isValidCharacters.message);
+    }
+}
+
+function mudarOnClickCheckEstatico() {
+    waitForObject('#formCadInst').then(el => {
+        el.find('input[type=button]').get(0).setAttribute('onclick', 'checkEstatico()');
+    }).catch(err => {
+        console.error(err);
     });
 }

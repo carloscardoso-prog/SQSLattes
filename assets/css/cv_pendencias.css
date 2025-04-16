@@ -1,0 +1,22 @@
+.pendencia {border-bottom:1px dashed #aaa; font:normal 11px verdana;}
+.pendencia div {padding:7px 30px; padding-right:5px; text-align:justify}
+
+.pendencia .loading {background:url(../imagens/icone-aviso-loading.gif) no-repeat 7px 50%;}
+
+.pendencia .pendencias {background:url(../imagens/quadro-pendencias.gif) no-repeat 7px 50% #FBFBEA; color:#333}
+.pendencia .pendencias  a {color:#333;}
+
+.pendencia .avisos {background:url(../imagens/quadro-avisos.gif) no-repeat 7px 50% #fff; color:#999}
+.pendencia .avisos a {color:#999}
+
+.pendencia .dicas {background:url(../imagens/quadro-dicas.gif) no-repeat 7px 50% #fff; color:#999}
+.pendencia .dicas a {color:#999}
+
+.pendencia .enviar {background:url(../imagens/quadro-enviar.gif) no-repeat 7px 50% #ffc; color:#333}
+.pendencia .enviar a {color:#333}
+
+.pendencia .noticias {background:url(../imagens/quadro-noticias.gif) no-repeat 7px 50% #fff; color:#999}
+.pendencia .noticias a {color:#999}
+
+.pendencia .novidades {background:url(../imagens/quadro-novidades.gif) no-repeat 7px 50% #fff; color:#333}
+.pendencia .novidades a {color:#333}

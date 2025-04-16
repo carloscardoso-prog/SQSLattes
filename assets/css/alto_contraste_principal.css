@@ -1,0 +1,544 @@
+.altoContraste a:link,
+.altoContraste a:visited,
+.altoContraste a:active {
+    color: #333333;
+}
+.altoContraste a:hover {
+    color: #999999;
+}
+.altoContraste select,
+.altoContraste option {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+.altoContraste .menu_lateral{
+	filter: grayscale(0.5) blur(10px);
+}
+.altoContraste .logo a {
+    background-image: url("../imagens/logo_cnpq_contraste.png");
+}
+.altoContraste .menuCtl {
+    background-image: url("../imagens/bg_menu_contraste.png");
+    font-family: Tahoma,Geneva,sans-serif;
+}
+@media (max-width:1000px) {
+.altoContraste .menuCtl {
+	background: none repeat scroll 0 0 #666666;
+}
+}
+.altoContraste .menuPrincipal {
+    background-image: url("../imagens/bg_menu_principal_contraste.jpg");
+	background-color: #F0F4F9;
+}
+.altoContraste .header {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #5E5E5E;
+}
+.altoContraste .megamenu .column ul li a:hover {
+    color: #999999;
+}
+.altoContraste .megamenu .column h3 {
+    background: none repeat scroll 0 0 #999999;
+    color: #FFFFFF;
+}
+.altoContraste .dadosPrinc {
+    color: #333333;
+}
+.altoContraste .bordaBox .cont {
+    background: none repeat scroll 0 0 #FEFEFE;
+    border: 0 solid #999999;
+    box-shadow: 0 0 2px #666666;
+}
+.altoContraste .bordaBox .avi {
+    background: none repeat scroll 0 0 transparent;
+    box-shadow: none;
+}
+.altoContraste .busca-itens {
+    background: none repeat scroll 0 0 #FEFEFE;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.altoContraste #todos_itens .link_menu li a {
+    background-image: url("../imagens/bullet_blue_contraste.png");
+	color: #333333;
+}
+.altoContraste #todos_itens .link_menu li a:hover {
+	color: #999999;
+}
+/* Links resumo */
+.altoContraste .avisos li a:hover {
+    color: #666666;
+    text-decoration: none;
+}
+.altoContraste .editarResumo {
+    background-image: url("/images/estatico/imagens/icoEditarResumo_contraste.png");
+}
+.altoContraste .exibir-resumo,
+.altoContraste .esconder-resumo {
+    background-image: url("/images/estatico/imagens/icoResumoCompleto_contraste.png");
+}
+/* fim - Links resumo */
+.altoContraste .ico-atualiz {
+    background-image: url("../imagens/sprit_icons_dados_contraste.png");
+}
+.altoContraste .ico-link {
+    background-image: url("../imagens/sprit_icons_dados_contraste.png");
+}
+.altoContraste .ico-public {
+    background-image: url("../imagens/sprit_icons_dados_contraste.png");
+}
+.altoContraste .fotoCurriculo a {
+    background-image: url("../imagens/ico_alterar_foto_contraste.png");
+}
+.altoContraste img,
+.altoContraste a{
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+.altoContraste font {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+	color: #333;
+}
+.altoContraste .avisos li.important span {
+    background-image: url("../imagens/sprite-icons-av_contraste.png");
+}
+.altoContraste .avisos li.important {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.altoContraste .avisos li.info span {
+    background-image: url("../imagens/sprite-icons-av_contraste.png");
+}
+.altoContraste .avisos li.info {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.altoContraste .tit-avisos {
+    background-image: url("../imagens/bg_tit_avisos_contraste.png");
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #333333;
+}
+.altoContraste .tituloSistema {
+    background-image: url("/images/estatico/imagens/titulo-sistema_contraste.png");
+}
+.altoContraste .subtitMenu {
+    color: #333333;
+}
+.altoContraste .fotoCurriculo {
+    border: 1px solid #999999;
+}
+.altoContraste .megamenu .column ul li {
+    background-image: url("../imagens/ponto_contraste.png");
+    background-position: left center;
+}
+.altoContraste .megamenu .column ul li a {
+    color: #333333;
+}
+.altoContraste .icons-top-enviar:hover {
+	text-shadow: 1px 1px #FFFFFF;
+	background: #fcfcfc; /* Old browsers */
+	background: -moz-linear-gradient(top, #fcfcfc 0%, #bebebe 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#bebebe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#bebebe 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fcfcfc 0%,#bebebe 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fcfcfc 0%,#bebebe 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fcfcfc 0%,#bebebe 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
+	color: #777777 !important;
+}
+.altoContraste .bt-menu-header.titBottom.icons-top.icons-top-enviar:hover > span {
+	background-position: -1px 2px;
+}
+.altoContraste .icons-top-print:hover {
+	background-position: -286px 0;
+}
+.altoContraste .icons-top-fontMais:hover {
+	background-position: -176px 0;
+}
+.altoContraste .icons-top-fontMenos:hover {
+	background-position: -198px 0;
+}
+.altoContraste .icons-top-help:hover {
+	background-position: -264px 0;
+}
+.altoContraste .icons-top-sair:hover {
+	background-position: -132px 0;
+}
+.altoContraste .icons-top-contraste:hover {
+	background-position: -242px 0;
+}
+.altoContraste .icons-top-enviar {
+	text-shadow: none;
+	background: #979797; /* Old browsers */
+    background: -moz-linear-gradient(top, #979797 0%, #3f3f3f 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#979797), color-stop(100%,#3f3f3f)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #979797 0%,#3f3f3f 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #979797 0%,#3f3f3f 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #979797 0%,#3f3f3f 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #979797 0%,#3f3f3f 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#979797', endColorstr='#3f3f3f',GradientType=0 ); /* IE6-9 */
+	color: #FFFFFF !important;
+}
+.altoContraste .bt-menu-header.titBottom.icons-top.icons-top-enviar > span {
+	background-position: -1px -21px;
+}
+.altoContraste .icons-top-print {
+	background-position: -286px -22px;
+}
+.altoContraste .icons-top-fontMais {
+	background-position: -176px -22px;
+}
+.altoContraste .icons-top-fontMenos {
+	background-position: -198px -22px;
+}
+.altoContraste .icons-top-help {
+	background-position: -264px -22px;
+}
+.altoContraste .icons-top-sair {
+	background-position: -132px -22px;
+}
+.altoContraste .icons-top-contraste {
+    background-position: -242px -22px;
+}
+.altoContraste .icons-aviso-privado {
+	background-position: -311px -21px;
+}
+.altoContraste .icons-aviso-help {
+	background-position: -333px -21px;
+}
+.altoContraste .menuLateral_redes {
+	background-image: url("../imagens/BtRede_contraste.png") !important;
+}
+.altoContraste .menuLateral_redes:hover {
+	background-image: url("../imagens/BtRede2_contraste.png") !important;
+}
+.altoContraste .menuLateral_graficos {
+	background-image: url("../imagens/BtGrafico_contraste.png") !important;
+}
+.altoContraste .menuLateral_graficos:hover {
+	background-image: url("../imagens/BtGrafico2_contraste.png") !important;
+}
+.altoContraste .menuLateral_autores {
+	background-image: url("../imagens/BtAutores_contraste.png") !important;
+}
+.altoContraste .menuLateral_autores:hover {
+	background-image: url("../imagens/BtAutores2_contraste.png") !important;
+}
+.altoContraste .menuLateral_identificar {
+	background-image: url("../imagens/BtIdentificar_contraste.png") !important;
+}
+.altoContraste .menuLateral_identificar:hover {
+	background-image: url("../imagens/BtIdentificar2_contraste.png") !important;
+}
+.altoContraste .menuLateral_palavras {
+	background-image: url("../imagens/BtTextos_contraste.png") !important;
+}
+.altoContraste .menuLateral_palavras:hover {
+	background-image: url("../imagens/BtTextos2_contraste.png") !important;
+}
+.altoContraste .menuLateral_areas {
+	background-image: url("../imagens/BtConhecimento_contraste.png") !important;
+}
+.altoContraste .menuLateral_areas:hover {
+	background-image: url("../imagens/BtConhecimento2_contraste.png") !important;
+}
+.altoContraste .menuLateral_instituicoes {
+	background-image: url("../imagens/BtInstituicoes_contraste.png") !important;
+}
+.altoContraste .menuLateral_instituicoes:hover {
+	background-image: url("../imagens/BtInstituicoes2_contraste.png") !important;
+}
+.altoContraste .menuLateral_vincular {
+	background-image: url("../imagens/BtPeriodico_contraste.png") !important;
+}
+.altoContraste .menuLateral_vincular:hover {
+	background-image: url("../imagens/BtPeriodico2_contraste.png") !important;
+}
+.altoContraste .menuLateral_importacao {
+	background-image: url("../imagens/BtProducao_contraste.png") !important;
+}
+.altoContraste .menuLateral_importacao:hover {
+	background-image: url("../imagens/BtProducao2_contraste.png") !important;
+}
+.altoContraste .menuLateral_impressao {
+	background-image: url("../imagens/BtImprimir_contraste.png") !important;
+}
+.altoContraste .menuLateral_impressao:hover {
+	background-image: url("../imagens/BtImprimir2_contraste.png") !important;
+}
+.altoContraste .menuLateral_exportar {
+	background-image: url("../imagens/BtExportar_contraste.png") !important;
+}
+.altoContraste .menuLateral_exportar:hover {
+	background-image: url("../imagens/BtExportar2_contraste.png") !important;
+}
+.altoContraste .menuLateral_importar {
+	background-image: url("../imagens/BtImportar_contraste.png") !important;
+}
+.altoContraste .menuLateral_importar:hover {
+	background-image: url("../imagens/BtImportar2_contraste.png") !important;
+}
+
+
+/*Alto Contraste - Modal*/
+.altoContraste .areaSelecao a {
+    background: none repeat scroll 0 0 #666666 !important;
+    border-radius: 3px 0 0 3px !important;
+    box-shadow: 1px 1px 2px -1px #999999 inset !important;
+    color: #EEEEEE !important;
+    text-shadow: 0 1px 0 #000000 !important;
+}
+.altoContraste .areaSelecao a:hover {
+    background: none repeat scroll 0 0 #999999 !important;
+}
+.altoContraste .navegacao fieldset select:focus {
+    border: 1px solid #555555 !important;
+    box-shadow: 0 0 1px #999999 inset !important;
+}
+.altoContraste .navegacao fieldset input[type="text"]:focus {
+    border: 1px solid #555555 !important;
+    box-shadow: 0 0 2px #999999 inset !important;
+}
+.altoContraste .navegacao fieldset em {
+    border-bottom: 2px solid #666666 !important;
+    color: #333333 !important;
+}
+.altoContraste .navegacao2 fieldset em {
+	border-bottom: 2px solid #666666 !important;
+    color: #333333 !important;
+}
+.altoContraste .navegacao .controle_peq {
+    background-color: #CCCCCC !important;
+}
+.altoContraste .navegacao2 .controle_peq {
+	background-color: #CCCCCC !important;
+}
+.altoContraste .lupa {
+    background: url("../imagens/lupa_contraste.png") no-repeat scroll right center transparent;
+}
+.altoContraste .grid .impar td {
+	background: #EEEEEE;
+}
+.altoContraste div.grid-wrapper table th {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border-right: 1px solid #999999;
+}
+.altoContraste div.grid-wrapper div.grid-header {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border-bottom: 1px solid #BBBBBB;
+}
+.altoContraste .grid th {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border-bottom: 1px solid #BBBBBB;
+    border-right: 1px solid #BBBBBB;
+    color: #333333;
+}
+.altoContraste .rodapeGrid {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border: 1px solid #BBBBBB;
+}
+.altoContraste div.grid-wrapper {
+    border: 1px solid #999999;
+}
+.altoContraste .ui-widget-content {
+    background: url("../imagens/ui-bg_inset-hard_100_fcfdfd_1x100.png") repeat-x scroll 50% bottom #FCFDFD;
+    border: 1px solid #666666;
+    color: #222222;
+}
+.altoContraste .ui-widget-header {
+    background: none repeat-x scroll 50% 50% #999999;
+    border: 1px solid #666666;
+    color: #FFFFFF;
+}
+.altoContraste .ui-state-default, .altoContraste .ui-widget-content .ui-state-default, .altoContraste .ui-widget-header .ui-state-default {
+    background: none repeat-x scroll 50% 50% #EEEEEE;
+    border: 1px solid #CCCCCC;
+    color: #000000;
+}
+.altoContraste .fotoCurriculo.ident a.up_foto {
+    background: url("../imagens/ico_alterar_foto_contraste.png") no-repeat scroll 0 0 transparent;
+}
+.altoContraste .navegacao .controle {
+    background-color: #CCCCCC !important;
+}
+.altoContraste .botao a {
+    background: none repeat scroll 0 0 #333333;
+    color: #FFFFFF !important;
+}
+.altoContraste .botao a:hover {
+    background: none repeat scroll 0 0 #666666;
+}
+.altoContraste .fotoCurriculo.ident {
+    border: 1px solid #666666;
+}
+.altoContraste .modal_holder .modal {
+    background: none repeat scroll 0 0 #CCCCCC;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.altoContraste .modal_holder .superior_central {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+}
+.altoContraste .modal_holder .centro {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.altoContraste .modal_holder .centro_direito {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.altoContraste .modal_holder .centro_esquerdo {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.altoContraste .areaSelecao {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.altoContraste .navegacao fieldset em {
+    border-bottom: 2px solid #999999 !important;
+    color: #000000 !important;
+}
+.altoContraste .navegacao fieldset em a {
+    color: #000000 !important;
+}
+.altoContraste .ext tfoot {
+    background-image: none;
+}
+.altoContraste .ext, .int {
+    color: #000000 !important;
+}
+.altoContraste .ext td {
+    background-color: #CCCCCC;
+}
+.altoContraste .ext th {
+    background: none repeat scroll 0 0 #999999 !important;
+    color: #FFFFFF !important;
+}
+.altoContraste .ext .numerador {
+    background: none repeat scroll 0 0 #999999 !important;
+    color: #555555 !important;
+}
+.altoContraste .int .even td {
+    background: none repeat scroll 0 0 #EEEEEE !important;
+}
+.altoContraste #lista tfoot td {
+    background-color: #BBBBBB;
+    border-top: 1px solid #BCBCBC;
+}
+.altoContraste .adicionar,
+.altoContraste .adicionar_en {
+	background-color: #333333;
+	color: #FFFFFF !important;
+}
+.altoContraste .adicionar:hover,
+.altoContraste .adicionar_en:hover {
+	background-color: #666;
+}
+.altoContraste div.win-wrapper {
+    background: none repeat scroll 0 0 #CCCCCC;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.altoContraste div.win-wrapper div.win-title {
+    color: #333333;
+}
+.altoContraste div.win-wrapper div.win-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BBBBBB;
+}
+.altoContraste div.win-wrapper a.close {
+    background: url("../imagens/tool-sprites_contraste.png") no-repeat scroll 0 0 transparent;
+}
+.altoContraste div.win-wrapper a.close:hover {
+    background: url("../imagens/tool-sprites_contraste.png") no-repeat scroll -15px 0 transparent;
+}
+.altoContraste span.titulo {
+    color: #333333;
+}
+.altoContraste b.quadradoleg,
+.altoContraste b.quadrado,
+.altoContraste .tabela th,
+.altoContraste li.tipos,
+.altoContraste li.autores,
+.altoContraste li.grandesAreas,
+.altoContraste li.areas,
+.altoContraste li.subAreas,
+.altoContraste li.palavrasChave,
+.altoContraste li.ano,
+.altoContraste object {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+.altoContraste .tabela li,
+.altoContraste .tabela tbody td {
+	border-color: #999;
+}
+
+/*Alto Contraste - Impressão*/
+.altoContraste .nome {
+    color: #333333;
+}
+.altoContraste .title-wrapper h2 {
+    border-bottom: 1px solid #666666;
+    color: #333333;
+}
+.altoContraste em {
+    border-bottom: 1px solid #333333;
+    color: #333333;
+}
+.altoContraste .ano {
+    color: #333333;
+}
+.altoContraste .AtuaProfTabelaCelula95 {
+    background: none repeat scroll 0 0 #CCCCCC;
+    color: #000000;
+}
+.altoContraste .AtuaProfTabelaCelula95 {
+    background: none repeat scroll 0 0 #CCCCCC;
+    color: #000000;
+}
+.altoContraste .agrupadorsub {
+    color: #333333;
+}
+.altoContraste .alerta {
+	background:url(../imagens/alerta_contraste.png) no-repeat 5% 10%
+}
+.altoContraste .ok {
+	background:url(../imagens/ok_contraste.png) no-repeat 5% 10%
+}
+.altoContraste .erro {
+	background:url(../imagens/erro_contraste.png) no-repeat 5% 10%
+}
+
+/*Alto Contraste - envio*/
+.altoContraste div.declaracao {
+	background: none;
+}
+
+/*Alto Contraste - Lista de produções*/
+.altoContraste .navegacao em {
+	border-bottom: 2px solid #999999 !important;
+	color: #000000 !important;
+}
+.altoContraste tr td {
+	color: #333;
+}
+.altoContraste .odd td {
+	background: none repeat scroll 0 0 #eee;
+}
+.altoContraste tr.hover td {
+	background: none repeat scroll 0 0 #333;
+	color: #fff;
+}
+.altoContraste tr.selected td {
+	background: none repeat scroll 0 0 #333;
+}
+.altoContraste .filter th {
+	color: #333 !important;
+}
+.altoContraste .tip {
+	background:#333;
+	border-color: #333;
+	color:#fff;
+}
+.altoContraste .tip a {
+	color:#fff;
+}
