@@ -32,9 +32,10 @@ switch ($param['tipo']) {
         $urlGet = "https://wwws.cnpq.br/cvlattesweb/pkg_cv_estr." . $param['url_action'] . "?FTIPO=END";
         break;
     case 'form':
-        echo '<pre>';
-        print_r($param);
-        die;
+        $urlGet = "https://wwws.cnpq.br/cvlattesweb/pkg_cv_estr." . $param['url_action'] . "?FTIPO=FORM&f_nivel=" . $param['nivel'];
+        // echo '<pre>';
+        // print_r($param);
+        // die;
         break;
     case 'instituicao':
         $urlGet = "https://wwws.cnpq.br/cvlattesweb/pkg_cv_estr." . $param['url_action'] . "?FTIPO=END&FCTR=C&fnomeinst=" . $param['dado'];
@@ -43,9 +44,6 @@ switch ($param['tipo']) {
         $urlGet = "https://wwws.cnpq.br/cvlattesweb/pkg_cv_estr." . $param['url_action'] . "?FTIPO=END";
         break;
     case 'finalizar_cadastro_instituicao':
-        // echo '<pre>';
-        // print_r("TESTE FIOADPSJFODISAJFIOADS");
-        // die;
         $postData = http_build_query($param['dado']);
         $opts = [
             'http' => [

@@ -1333,7 +1333,7 @@ function whatCntAdd() {
     }
 }
 
-function recuperaInstMacroEstatico() {
+function recuperaInstMacroEstatico(dados) {
     var valornominst = $(":input[name='fnomeinst']").val();
     if ($.trim(valornominst).length <= 2) {
         alert("Realize a busca com ao menos 3 caracteres.");
@@ -1343,20 +1343,43 @@ function recuperaInstMacroEstatico() {
         }
 
         winSeleInst.request("proxy.php?param=" + encodeURIComponent(JSON.stringify(data)));
-        mudarOnClickRecuperaInstMacroEstatico();
-        mudarOnClickOutraInstEstatico();
+
+        mudarOnClickRecuperaInstMacroEstatico(dados);
+        mudarOnClickOutraInstEstatico(dados);
+        mudarSelecionaTodosResultados(dados);
     }
 }
 
-function mudarOnClickOutraInstEstatico() {
+function mudarSelecionaTodosResultados(data) {
+    switch (data.inputInstituicao.nome) {
+        case '#finstender':
+            var nomeFuncao = "selecionaInstEndEstatico";
+            break;
+        case '#finstform':
+            var nomeFuncao = "selecionaInstFormEstatico";
+            break;
+        default:
+            var nomeFuncao = "seleciona";
+            break;
+    }
+
+    waitForObject('.pad').then(el => {
+        $('.pad a').not('[href="#"]').each(function () {
+            var attr = $(this).attr('href');
+            $(this).attr('href', attr.replace("javascript:seleciona(", "javascript:" + nomeFuncao + "("));
+        });
+    });
+}
+
+function mudarOnClickOutraInstEstatico(data) {
     waitForObject('form strong a', 'clique aqui').then(el => {
-        el.get(0).setAttribute('onclick', 'outraInstEstatico()');
+        el.get(0).setAttribute('onclick', 'outraInstEstatico({tipo:"' + data.tipo + '", inputInstituicao: {nome: "' + data.inputInstituicao.nome + '", cod: "' + data.inputInstituicao.cod + '"}})');
     }).catch(err => {
         console.error(err);
     });
 }
 
-function outraInstEstatico() {
+function outraInstEstatico(dados) {
     var data = {
         tipo: 'cadastro_instituicao', url_action: 'CADAST_INST'
     }
@@ -1369,7 +1392,7 @@ function outraInstEstatico() {
     })
 
     winCadInst.show();
-    mudarOnClickCheckEstatico();
+    mudarOnClickCheckEstatico(dados);
 }
 
 function seleInstEnd() {
@@ -1392,14 +1415,14 @@ function seleInstEnd() {
             });
             winSeleInst.show();
 
-            mudarOnClickRecuperaInstMacroEstatico();
+            mudarOnClickRecuperaInstMacroEstatico({ tipo: 'endereco', inputInstituicao: { nome: '#finstender', cod: 'fcodinstender' } });
         }
     }
 }
 
-function mudarOnClickRecuperaInstMacroEstatico() {
+function mudarOnClickRecuperaInstMacroEstatico(data) {
     waitForObject('#forminst').then(el => {
-        el.find('input[type=button]').get(0).setAttribute('onclick', 'recuperaInstMacroEstatico()');
+        el.find('input[type=button]').get(0).setAttribute('onclick', 'recuperaInstMacroEstatico({tipo:"' + data.tipo + '", inputInstituicao: {nome: "' + data.inputInstituicao.nome + '", cod: "' + data.inputInstituicao.cod + '"}})');
     }).catch(err => {
         console.error(err);
     });
@@ -1497,6 +1520,7 @@ function seleInstForm() {
             width: 550
         });
         winSeleInst.show();
+        mudarOnClickRecuperaInstMacroEstatico({ tipo: 'formacao', inputInstituicao: { nome: '#finstform', cod: 'fcodinstform' } });
     }
 }
 
@@ -1599,27 +1623,16 @@ function cancelar() {
     return;
 }
 
-
-function seleciona(vlr, texto, xpais) {
-
-    if ("fcodinstform" == "fcodinstender") {
-        if ($(":input[name='fcodinstender']").val() != vlr) {
-            if ("END" != "ANDAMENTO") {
-                $("input[name=f_cod_curso]").val("");
-                $("input[name=f_cod_curso_outro]").val("");
-                $("input[name=fcurso]").val("");
-            } else {
-
-                $("input[name=af_cod_curso]").val("");
-                $("input[name=af_cod_curso_outro]").val("");
-                $("input[name=afcurso]").val("");
-            }
-        }
-    }
-
-
+function selecionaInstEndEstatico(vlr, texto, xpais, namesInput) {
     $(":input[name='finstender']").val(texto).trigger("focus");
     $(":input[name='fcodinstender']").val(vlr);
+
+    winSeleInst.remove()
+}
+
+function selecionaInstFormEstatico(vlr, texto, xpais, namesInput) {
+    $(":input[name='finstform']").val(texto).trigger("focus");
+    $(":input[name='fcodinstform']").val(vlr);
 
     winSeleInst.remove()
 }
@@ -1702,7 +1715,7 @@ function waitForObject(selector, timeout = 5000) {
                 clearInterval(checkExist);
                 reject(new Error(`Timeout: ${selector} not found`));
             }
-        }, 100);
+        }, 1000);
     });
 }
 
@@ -1729,7 +1742,7 @@ function checkpais() {
     return;
 }
 var isValidCharacters;
-function checkEstatico() {
+function checkEstatico(dados) {
     if (trim(document.GN_INST_OUTRA.f_nme_inst.value) == "") {
         alert("Informe o nome da instituição");
         document.GN_INST_OUTRA.f_nme_inst.focus();
@@ -1746,6 +1759,18 @@ function checkEstatico() {
         var nome = $(":input[name='f_nme_inst']").val();
         var sigla = $(":input[name='f_sigla']").val();
         var pais = $(":input[name='f_pais_inst']").val();
+
+        switch (dados.inputInstituicao.nome) {
+            case "#finstform":
+                var ftipo = "FORM";
+                break;
+            case "#finstender":
+                var ftipo = "END";
+                break;
+            default:
+                break;
+        }
+        
         var data = {
             param: {
                 tipo: 'finalizar_cadastro_instituicao',
@@ -1754,47 +1779,23 @@ function checkEstatico() {
                     f_nme_inst: nome,
                     f_sigla: sigla,
                     f_pais_inst: pais,
-                    f_cod: "E5531553Z",
+                    f_cod: "E5531553Z", // DADO MOCKADO
                     f_nivel: "",
                     f_pgm: "",
                     f_ctr: "I",
                     f_agencia: "N",
-                    ftipo: "END",
-                    // bt: "Confirmar",
+                    ftipo: ftipo,
                 }
             }
         }
-        //////// winCadInst.request("proxy.php?param=" + encodeURIComponent(JSON.stringify(data)));
 
-        // var form = $("form#formCadInst"), data = form.serializeArray();
-        // escapeSerializedJSON(data);
-        // console.log(form);
-
-        /* $.ajax({
-           url : "pkg_cv_estr.validate_length_special_charac",
-           dataType : "json",
-           data : {
-             val : $("input[name=f_nme_inst]").val(),
-             length_val : 75
-           },
-           error : function(e) {
-             alert(e + "erro");
-           },
-           success : function(result) {
-             isValidCharacters = result;
-           }
-         });*/
-        //    if(isValidCharacters.success)
-        // winCadInst.request("https://wwws.cnpq.br/cvlattesweb/pkg_cv_estr.CADAST_INST", data, true);
         winCadInst.request("proxy.php", data, true);
-        //    else
-        //    alert(isValidCharacters.message);
     }
 }
 
-function mudarOnClickCheckEstatico() {
+function mudarOnClickCheckEstatico(data) {
     waitForObject('#formCadInst').then(el => {
-        el.find('input[type=button]').get(0).setAttribute('onclick', 'checkEstatico()');
+        el.find('input[type=button]').get(0).setAttribute('onclick', 'checkEstatico({tipo:"' + data.tipo + '", inputInstituicao: {nome: "' + data.inputInstituicao.nome + '", cod: "' + data.inputInstituicao.cod + '"}})');
     }).catch(err => {
         console.error(err);
     });
