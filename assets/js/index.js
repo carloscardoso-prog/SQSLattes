@@ -894,7 +894,7 @@ $(document).ready(function () {
             loadingWin = $.win({
                 showCloseBtn: false,
                 width: "auto",
-                content: "Carregando ...",
+                content:  "<h1>Carregando ...</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
                 visible: true
             });
 
@@ -1386,7 +1386,7 @@ function outraInstEstatico(dados) {
 
     winCadInst = $.win({
         url: "proxy.php?param=" + encodeURIComponent(JSON.stringify(data)),
-        loadingMessage: "Carregando conteúdo ....",
+        loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         autoRemove: true,
         width: 550
     })
@@ -1410,7 +1410,7 @@ function seleInstEnd() {
             winSeleInst = $.win({
                 autoRemove: true,
                 url: "proxy.php?param=" + encodeURIComponent(JSON.stringify(data)),
-                loadingMessage: "Carregando conteúdo ....",
+                loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
                 width: 550
             });
             winSeleInst.show();
@@ -1516,7 +1516,7 @@ function seleInstForm() {
         winSeleInst = $.win({
             url: "proxy.php?param=" + encodeURIComponent(JSON.stringify(data)),
             autoRemove: true,
-            loadingMessage: "Carregando conteúdo ....",
+            loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
             width: 550
         });
         winSeleInst.show();
@@ -1537,7 +1537,7 @@ function seleInstFormAndamento() {
         winSeleInst = $.win({
             url: "proxy.php?param=" + encodeURIComponent(JSON.stringify(data)),
             autoRemove: true,
-            loadingMessage: "Carregando conteúdo ....",
+            loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
             width: 550
         });
         winSeleInst.show();
@@ -1562,7 +1562,7 @@ function selecionarAgenciaFinanciadora() {
     winSelecionarAgenciaFinanciadora = $.win({
         //  url: "pkg_cv_estr.prc_agencia?f_cod=E5537246Y&F_PGM=ANDAMENTO",
         url: "pkg_cv_estr.prc_agencia?f_cod=E5537246Y",
-        loadingMessage: "Carregando conteúdo ....",
+        loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         autoRemove: true,
         width: 550
     });
@@ -1574,7 +1574,7 @@ function selecionarAgenciaFinanciadoraAndamento() {
     winSelecionarAgenciaFinanciadora = $.win({
         url: "pkg_cv_estr.prc_agencia?f_cod=E5537246Y&F_PGM=ANDAMENTO",
         //    url: "pkg_cv_estr.prc_agencia?f_cod=E5537246Y",
-        loadingMessage: "Carregando conteúdo ....",
+        loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         autoRemove: true,
         width: 550
     });
@@ -1587,7 +1587,7 @@ function seleAreaForm() {
     winSeleArea = $.win({
         url: "pkg_cv_estr.SELE_AREA?F_ORIGEM=FORM&f_max=1&f_cod_rh=E5537246Y",
         autoRemove: true,
-        loadingMessage: "Carregando conteúdo ....",
+        loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         width: 550
     });
     winSeleArea.show();
@@ -1596,15 +1596,32 @@ function seleAreaForm() {
 
 var winSelecaoCurso;
 function curso() {
-    var fnivel = $("select[name=fnivel] option:selected").val();
-    var fcodinstform = $("input[name=fcodinstform]").val();
+    var data = {
+        tipo: 'curso',
+        url_action: 'prc_curso_form',
+        f_nivel: $("select[name=fnivel] option:selected").val(),
+        f_inst: $("input[name=fcodinstform]").val(),
+        f_pgm: 'FORM',
+        f_cod: "E5538575P" // DADO MOCKADO, TEM QUE ALTERAR
+    }
+
     winSelecaoCurso = $.win({
-        url: "pkg_cv_estr.prc_curso_form?f_cod=E5537246Y&f_pgm=FORM&f_nivel=" + fnivel + "&f_inst=" + fcodinstform + "&f_ciencia=",
-        loadingMessage: "Carregando ...",
+        url: "proxy.php?param=" + encodeURIComponent(JSON.stringify(data)),
+        loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         autoRemove: true,
         width: 550
-    });
+    })
+
     winSelecaoCurso.show();
+    mudarOnNovoCursoEstatico();
+}
+
+function mudarOnNovoCursoEstatico() {
+    waitForObject('form[name=GN_CURSO_FORM]').then(el => {
+        el.find('a[href=#]').get(0).setAttribute('onclick', 'novoCursoEstatico()');
+    }).catch(err => {
+        console.error(err);
+    });
 }
 
 function cursoAndamento() {
@@ -1612,7 +1629,7 @@ function cursoAndamento() {
     var fcodinstform = $("input[name=afcodinstform]").val();
     winSelecaoCurso = $.win({
         url: "pkg_cv_estr.prc_curso_form?f_cod=E5537246Y&f_pgm=ANDAMENTO&f_nivel=" + fnivel + "&f_inst=" + fcodinstform + "&f_ciencia=",
-        loadingMessage: "Carregando ...",
+        loadingMessage:  "<h1>Carregando ...</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         autoRemove: true,
         width: 550
     });
@@ -1645,7 +1662,7 @@ function seleInstAtiv() {
     winSeleInst = $.win({
         url: "pkg_cv_estr.SELE_INST?FTIPO=ATIV&FCOD=E5537246Y",
         autoRemove: true,
-        loadingMessage: "Carregando conteúdo ....",
+        loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         width: 550
     })
     winSeleInst.show();
@@ -1655,7 +1672,7 @@ function dominio() {
 
     contractWin = $.win({
         visible: true,
-        loadingMessage: "Carregando conteúdo ....",
+        loadingMessage:  "<h1>Carregando conteúdo ....</h1>" +"<p>Essa janela existe no máximo por 60 segundos por conta da lentidão e instabilidade do servidor do governo. Em caso de erros, você receberá um aviso.</p>",
         autoRemove: true,
         title: "Tipo do vínculo",
         url: "pkg_cv_estr.CONTRACT_TYPE",
@@ -1701,21 +1718,29 @@ function sele_eq(txt) {
     return true;
 }
 
-function waitForObject(selector, timeout = 5000) {
+let checkExist = null;
+function waitForObject(selector, timeout = 60000) {
+    if(checkExist){
+        clearInterval(checkExist);
+        checkExist = null;
+    }
     return new Promise((resolve, reject) => {
         const start = Date.now();
-
-        const checkExist = setInterval(() => {
+        checkExist = setInterval(() => {
             const el = document.querySelector(selector);
-
             if (el) {
                 clearInterval(checkExist);
+                checkExist = null;
                 resolve($(el));
             } else if (Date.now() - start > timeout) {
                 clearInterval(checkExist);
+                checkExist = null;
+                $('.win-wrapper').remove();
+                $('.win-overlay').remove();
+                alert("O servidor do Lattes (Governo) está com problemas/lentidão. Favor, aguarde 10 segundos e tente novamente.");
                 reject(new Error(`Timeout: ${selector} not found`));
             }
-        }, 1000);
+        }, 100);
     });
 }
 
@@ -1770,7 +1795,7 @@ function checkEstatico(dados) {
             default:
                 break;
         }
-        
+
         var data = {
             param: {
                 tipo: 'finalizar_cadastro_instituicao',
@@ -1796,6 +1821,674 @@ function checkEstatico(dados) {
 function mudarOnClickCheckEstatico(data) {
     waitForObject('#formCadInst').then(el => {
         el.find('input[type=button]').get(0).setAttribute('onclick', 'checkEstatico({tipo:"' + data.tipo + '", inputInstituicao: {nome: "' + data.inputInstituicao.nome + '", cod: "' + data.inputInstituicao.cod + '"}})');
+    }).catch(err => {
+        console.error(err);
+    });
+}
+
+
+
+var formacaoAcademica = {
+
+    esconderAgencia: function () {
+        if ($("input[name=com_bolsa]:checked").val() == undefined || $("input[name=com_bolsa]").val() == "N") {
+            $("input[name=f_nme_agencia]").parent().parent().hide();
+
+            //Largura da div
+            $("input[name=com_bolsa]").parents(".layout-cell-2").removeClass("layout-cell-2").addClass("layout-cell-6");
+        }
+
+        if ($("input[name=com_bolsa]").val() == "S") {
+            //Largura da div
+            $("input[name=com_bolsa]").parents(".layout-cell-6").removeClass("layout-cell-6").addClass("layout-cell-2");
+        }
+    },
+
+
+    popularCampos: function () {
+        function popularInputComBolsa() {
+            if ("" == "S" && "" != "B" && "" != "C" && "" != "") {
+                $("input[name=com_bolsa][value=S]").get(0).checked = true;
+            }
+            else
+                if ("" == "N" && "" != "B" && "" != "C" && "" != "") {
+                    $("input[name=com_bolsa][value=N]").get(0).checked = true;
+                }
+        }
+
+        popularInputComBolsa();
+        $("select[name=fnivel] option[value=]").attr("selected", "selected");
+    },
+
+    limparValoresItensInutilizadosPrimeiroGrauSegundoGrau: function () {
+        //$("#accordion>div:eq(0)>div:eq(1)").find("input").each(function(){
+        $("#formacao-concluida .esconde-graduacao input").each(function () {
+            var $this = $(this);
+            var name = $this.attr("name");
+            if (name != "finstform" && name != "fcodinstform" && name != "fanoiniform" && name != "fanoterform") {
+                $this.val("");
+            }
+        });
+        $("input[name=com_bolsa]").get(0).checked = false;
+        $("input[name=com_bolsa]").get(1).checked = false;
+    },
+
+    primeiroGrau: function () {
+
+        function ocultarTrInutilizadas() {
+            /*for (var i = 3; i <= 7; i++) {
+                $("#accordion>div:eq(0)>div:eq(1) table.sup tbody tr:eq(" + i + ")").hide();
+            }*/
+            $("#formacao-concluida .esconde-graduacao").hide();
+        }
+
+        function removerEventosReferentesValidacao() {
+            $("input[name=com_bolsa]").unbind("change");
+        }
+        function removerTodosAttrJsonValidacao() {
+            //        delete registerConfig.finstform;
+            /*          delete registerConfig.fcodinstform;
+                      delete registerConfig.fanoiniform;
+                      delete registerConfig.fanoterform;*/
+            delete registerConfig.fcurso;
+            delete registerConfig.f_cod_curso;
+            delete registerConfig.f_cod_curso_outro;
+            delete registerConfig.f_nme_agencia;
+            delete registerConfig.f_agencia;
+            delete registerConfig.f_agencia_outra;
+            delete registerConfig.ftitulotese;
+            delete registerConfig.fnomeorient;
+            delete registerConfig.com_bolsa;
+        }
+        function removerAtributosHtmlReferentesValidacao() {
+            //var inputsAndamento = $("#accordion>div:eq(0)>div:eq(1)>input");
+            var inputsAndamento = $("#formacao-concluida .esconde-graduacao input");
+            $(inputsAndamento).removeAttr("required");
+            $(inputsAndamento).removeAttr("numbergt");
+            $("input[name=finstform]").removeAttr("validate");
+            $("input[name=f_nme_agencia]").removeAttr("validate").removeAttr("required");
+            $("input[name=ftitulotese]").removeAttr("validate").removeAttr("required");
+
+        }
+        function adicionarAttrsJsonValidacao() {
+            registerConfig.fanoiniform = {
+                required: true,
+                numberlt: "2026",
+                numbergt: anoNasc
+            };
+            registerConfig.fanoterform = {
+                required: true,
+                numbergt: "fanoiniform",
+                numberlt: "2026"
+            };
+        }
+        function adicionarAttrsHtmlValidacao() {
+            $("input[name=fanoiniform]")[0].setAttribute("required", "Campo Obrigatório Inicio(ano) não informado(Formação Acadêmica)");
+            $("input[name=fanoiniform]")[0].setAttribute("numbergt", "Campo Início(ano) deve ser maior ou igual ao ano de nascimento (Formação acadêmica)");
+            $("input[name=fanoterform]")[0].setAttribute("required", "Campo Conclusão (ano) não informado (Formação acadêmica)");
+            $("input[name=fanoterform]")[0].setAttribute("numbergt", "Campo Ano (Fim) deve ser maior que o Ano (Início) (Formação acadêmica)");
+        }
+
+        //Ocultar todos os itens do formulario
+        //$("#accordion>div:eq(0)>div:eq(1)>.sup").find("input,label, a").hide();
+        ocultarTrInutilizadas();
+
+        //Mostrar todos os itens referentes a primeiro grau
+        //$("input[name=finstform], input[name=fanoiniform],input[name=fanoterform],#accordion>div>div>.sup>tbody>tr>td>a:eq(0),#l_instituicao,#l_ano, #l_conclusao, br, #selecao_nivel_formacao_concluida").show();
+
+        removerTodosAttrJsonValidacao();
+        removerAtributosHtmlReferentesValidacao();
+        removerEventosReferentesValidacao();
+        adicionarAttrsJsonValidacao();
+        adicionarAttrsHtmlValidacao();
+        $("input[name=finstform]")[0].setAttribute("required", "Campo Instituição Obrigatório não informado (Formação acadêmica) ");
+        $("input[name=finstform]").attr("validate", "true");
+    },
+    segundoGrau: function () {
+        formacaoAcademica.primeiroGrau();
+    },
+    graduacao: function () { // 1
+        function adicionarAttrsJsonValidacao() {
+            registerConfig.finstform = {
+                required: true
+            };
+            registerConfig.fcurso = {
+                required: true
+            };
+            registerConfig.com_bolsa = {
+                required: true
+            };
+            registerConfig.ftitulotese = {
+                required: true
+            };
+            registerConfig.fnomeorient = {
+                required: true
+            };
+
+        }
+        function adicionarAttrsHtmlValidacao() {
+            $("input[name=fcurso]")[0].setAttribute("required", "Campo Obrigatório Curso não informado(Formação Acadêmica)");
+            $("input[name=fcurso]").attr("validate", "true").attr("disabled");
+
+            $("input[name=finstform]")[0].setAttribute("required", "Campo Instituição Obrigatório não informado (Formação acadêmica) ");
+            $("input[name=finstform]").attr("validate", "true");
+
+            $("input[name=com_bolsa]")[0].setAttribute("required", "Campo Obrigatório 'Com bolsa?' não informado(Formação Acadêmica)");
+            $("input[name=com_bolsa]")[1].setAttribute("required", "Campo Obrigatório 'Com bolsa?' não informado(Formação Acadêmica)");
+            $("input[name=com_bolsa]").attr("validate", "true");
+
+            $("input[name=ftitulotese]")[0].setAttribute("required", "Campo 'Título da dissertação/tese' Obrigatório não informado(Formação acadêmica)");
+            $("input[name=ftitulotese]").attr("validate", "true");
+
+            $("input[name=fnomeorient]")[0].setAttribute("required", "Campo 'Nome completo do orientador' Obrigatório não informado(Formação acadêmica)");
+            $("input[name=fnomeorient]").attr("validate", "true");
+
+        }
+        function AdicionarEventoComBolsaValidacao() {
+
+            $("input[name=com_bolsa]").change(function () {
+                $("input[name=com_bolsa]:eq(0)").val("S");
+                $("input[name=com_bolsa]:eq(1)").val("N");
+                $this = $(this);
+                var possuibolsa = $this.val();
+                if (possuibolsa == "S") {
+                    //Largura da div
+                    $this.parents(".layout-cell-6").removeClass("layout-cell-6").addClass("layout-cell-2");
+
+                    registerConfig.f_nme_agencia = { required: true };
+
+                    $("input[name=f_nme_agencia]").attr("validate", "true");
+                    $("input[name=f_nme_agencia]")[0].setAttribute("required", "Campo 'Agência Financiadora' Obrigatório  não informado(Formação acadêmica)");
+                    $("input[name=f_nme_agencia]").parent().parent().show();
+                }
+                else {
+                    //Largura da div
+                    $this.parents(".layout-cell-2").removeClass("layout-cell-2").addClass("layout-cell-6");
+
+                    delete registerConfig.f_nme_agencia;
+                    $("input[name=f_nme_agencia]").removeAttr("validate").removeAttr("required");
+                    $("input[name=f_nme_agencia]").parent().parent().hide();
+                }
+            });
+        }
+
+        formacaoAcademica.primeiroGrau();
+
+        //Mostrar campos de graduação
+        $("#formacao-concluida .esconde-graduacao").show();
+
+        //$("input[name=fcurso], #l_curso ,#accordion>div>div>.sup>tbody>tr>td>a , #l_bolsa, #bolsaRadioGroup, #bolsaRadioGroup>*, #l_agencia_financiadora,input[name=f_nme_agencia],#titulo_monografia,  input[name=ftitulotese], #nome_orientador , input[name=fnomeorient], #accordion>div:eq(0)>div:eq(1) table.sup tbody tr ").show();
+        //Mostrar todas as trs
+        //    $("#accordion>div:eq(0)>div:eq(1) table.sup tbody tr").show();
+        adicionarAttrsJsonValidacao();
+        adicionarAttrsHtmlValidacao();
+        AdicionarEventoComBolsaValidacao();
+
+    },
+    esperaDisponibilidade: function () {
+
+        var select = $("select[name=fnivel]");
+        var $select = $(select);
+        var valorFormacaoAcademica = $select.find("option:selected").val();
+        //   alert(valorFormacaoAcademica);
+        if (valorFormacaoAcademica == "B") {
+            formacaoAcademica.primeiroGrau();
+            formacaoAcademica.limparValoresItensInutilizadosPrimeiroGrauSegundoGrau();
+        }
+        else
+            if (valorFormacaoAcademica == "C") {
+                formacaoAcademica.segundoGrau();
+                formacaoAcademica.limparValoresItensInutilizadosPrimeiroGrauSegundoGrau();
+            }
+            else
+                if (valorFormacaoAcademica == "1") {
+                    formacaoAcademica.graduacao();
+                    delete registerConfig.ftitulotese;
+                    $(":input[name=ftitulotese]").removeAttr("validate");
+                    $("#titulo_monografia").html("Título da Monografia");
+                }
+                else
+                    if (valorFormacaoAcademica == "3") {
+                        formacaoAcademica.graduacao();
+                        $("#titulo_monografia").html("Título da dissertação/tese");
+                    }
+                    else
+                        if (valorFormacaoAcademica == "4") {
+                            formacaoAcademica.graduacao();
+                            $("#titulo_monografia").html("Título da dissertação/tese");
+                        }
+                        else
+                            if (valorFormacaoAcademica == "") {
+                                formacaoAcademica.primeiroGrau();
+                                formacaoAcademica.limparValoresItensInutilizadosPrimeiroGrauSegundoGrau();
+                                //$("#formacaoConcluida").find("input[name!=com_bolsa]").val("");
+                                $("#formacao-concluida input[name!=com_bolsa]").val("");
+                            }
+        formacaoAcademica.esconderAgencia();
+    },
+    init: function () {
+        //SetTimeout para contornar bug no evento.
+        $(document).ready(function () {
+            setTimeout("$('select[name=fnivel]').change(formacaoAcademica.esperaDisponibilidade)", 100);
+            setTimeout("formacaoAcademica.popularCampos()", 100);
+            var optionSelecionadaVal = "";
+            //    if(optionSelecionadaVal=="B" || optionSelecionadaVal=="C" ||optionSelecionadaVal=="" ){
+            setTimeout("formacaoAcademica.esperaDisponibilidade()", 1000);
+            //   }
+        });
+    }
+}
+formacaoAcademica.init();
+
+var formacaoAcademicaAndamento = {
+
+    esconderAgencia: function () {
+        if ($("input[name=acom_bolsa]:checked").val() == undefined) {
+            $("input[name=af_nme_agencia]").parent().parent().hide();
+        }
+    },
+
+    popularCampos: function () {
+
+        function popularInputComBolsa() {
+            if ("" == "S" && "" != "B" && "" != "C" && "" != "") {
+                $("input[name=acom_bolsa][value=S]").get(0).checked = true;
+            }
+            else
+                if ("" == "N" && "" != "B" && "" != "C" && "" != "") {
+                    $("input[name=acom_bolsa][value=N]").get(0).checked = true;
+                }
+        }
+
+        popularInputComBolsa();
+        $("select[name=fnivel_andamento] option[value=]").attr("selected", "selected");
+    },
+
+    removerTodosAttrJsonValidacao: function () {
+
+        delete registerConfig.afinstform;
+        delete registerConfig.afcodinstform;
+        delete registerConfig.afanoiniform;
+        delete registerConfig.afanoterform;
+        delete registerConfig.afcurso;
+        delete registerConfig.af_cod_curso;
+        delete registerConfig.af_cod_curso_outro;
+        delete registerConfig.af_nme_agencia;
+        delete registerConfig.af_agencia;
+        delete registerConfig.af_agencia_outra;
+        delete registerConfig.aftitulotese;
+        delete registerConfig.afnomeorient;
+        delete registerConfig.acom_bolsa;
+    },
+
+    primeiroGrau: function () {
+
+        function ocultarTrInutilizadas() {
+            /*for (var i = 3; i <= 8; i++) {
+                $("#formacaoAndamento table.sup tbody tr:eq(" + i + ")").hide();
+            }*/
+            $("#formacao-andamento .esconde-graduacao").hide();
+        }
+        function limparValoresItensInutilizados() {
+            //$("#formacaoAndamento>*").find("input").each(function(){
+            $("#formacao-andamento .esconde-graduacao input").each(function () {
+                var $this = $(this);
+                var name = $this.attr("name");
+                if (name != "afinstform" && name != "afcodinstform" && name != "afanoiniform" && name != "afanoterform") {
+                    $this.val("");
+                }
+            });
+            $("input[name=acom_bolsa]").get(0).checked = false;
+            $("input[name=acom_bolsa]").get(1).checked = false;
+        }
+        function removerEventosReferentesValidacao() {
+            $("input[name=acom_bolsa]").unbind("change");
+        }
+
+        function removerAtributosHtmlReferentesValidacao() {
+            //var inputsAndamento = $("#formacaoAndamento>input");
+            var inputsAndamento = $("#formacao-andamento .esconde-graduacao input");
+            $(inputsAndamento).removeAttr("required");
+            $(inputsAndamento).removeAttr("numbergt");
+            $("input[name=afinstform]").removeAttr("validate");
+            $("input[name=af_nme_agencia]").removeAttr("validate").removeAttr("required");
+        }
+        function adicionarAttrsJsonValidacao() {
+            registerConfig.afanoiniform = {
+                required: true,
+                numberlt: "2026",
+                numbergt: anoNasc
+            };
+            /*    registerConfig.afanoterform = {
+                    required: true,
+                    numbergt: "fanoiniform",
+                    numberlt: "2026"
+                };*/
+        }
+        function adicionarAttrsHtmlValidacao() {
+            $("input[name=afanoiniform]")[0].setAttribute("required", "Campo Obrigatório Inicio(ano) não informado(Formação Acadêmica)");
+            $("input[name=afanoiniform]")[0].setAttribute("numbergt", "Campo Início(ano) deve ser maior ou igual ao ano de nascimento (Formação acadêmica)");
+            $("input[name=afanoterform]")[0].setAttribute("required", "Campo Obrigatório Inicio(ano) não informado(Formação Acadêmica)");
+            $("input[name=afanoterform]")[0].setAttribute("numbergt", "Campo Ano (Fim) deve ser maior que o Ano (Início) (Formação acadêmica)");
+            $("input[name=afinstform]")[0].setAttribute("required", "Campo Instituição Obrigatório não informado (Formação acadêmica) ");
+            $("input[name=afinstform]").attr("validate", "true");
+        }
+
+        //Ocultar todos os itens do formulario
+        //$("#formacaoAndamento>.sup").find("input,label, a").hide();
+        //Mostrar todos os itens referentes a primeiro grau
+        //$("input[name=afinstform], input[name=acom_bolsa],  input[name=afanoiniform], #formacaoAndamento>.sup>tbody>tr>td>a:eq(0) ,#al_instituicao,#al_ano, br, #selecao_nivel_formacao_em_andamento").show();
+        limparValoresItensInutilizados();
+        ocultarTrInutilizadas();
+        formacaoAcademicaAndamento.removerTodosAttrJsonValidacao();
+        removerAtributosHtmlReferentesValidacao();
+        removerEventosReferentesValidacao();
+        adicionarAttrsJsonValidacao();
+        adicionarAttrsHtmlValidacao();
+
+    },
+    segundoGrau: function () {
+        formacaoAcademicaAndamento.primeiroGrau();
+    },
+    graduacao: function () { //2
+        function adicionarAttrsJsonValidacao() {
+            registerConfig.afinstform = {
+                required: true
+            };
+            registerConfig.afcurso = {
+                required: true
+            };
+            /* registerConfig.acom_bolsa = {
+                 required: true
+             };*/
+        }
+        function adicionarAttrsHtmlValidacao() {
+            $("input[name=afcurso]")[0].setAttribute("required", "Campo Obrigatório Curso não informado(Formação Acadêmica)");
+            $("input[name=afcurso]").attr("validate", "true").attr("disabled");
+
+            $("input[name=afinstform]")[0].setAttribute("required", "Campo Instituição Obrigatório não informado (Formação acadêmica) ");
+            $("input[name=afinstform]").attr("validate", "true");
+
+            /* $("input[name=acom_bolsa]")[0].setAttribute("required", "Campo Obrigatório 'Com bolsa?' não informado(Formação Acadêmica)");
+             $("input[name=acom_bolsa]")[1].setAttribute("required", "Campo Obrigatório 'Com bolsa?' não informado(Formação Acadêmica)");
+             $("input[name=acom_bolsa]").attr("validate", "true");*/
+        }
+        function AdicionarEventoComBolsaValidacao() {
+
+            $("input[name=acom_bolsa]").change(function () {
+
+                //Corrigir erro com values
+                $("input[name=acom_bolsa]:eq(0)").val("S");
+                $("input[name=acom_bolsa]:eq(1)").val("N");
+
+                $this = $(this);
+                var possuibolsa = $this.val();
+                if (possuibolsa == "S") {
+                    registerConfig.af_nme_agencia = {
+                        required: true
+                    };
+                    $("input[name=af_nme_agencia]").attr("validate", "true");
+                    $("input[name=af_nme_agencia]")[0].setAttribute("required", "Campo 'Agência Financiadora' Obrigatório não informado(Formação acadêmica)");
+                    $("input[name=af_nme_agencia]").parent().parent().show();
+
+                }
+                else {
+                    delete registerConfig.f_nme_agencia;
+                    $("input[name=af_nme_agencia]").removeAttr("validate").removeAttr("required");
+                    $("input[name=af_nme_agencia]").parent().parent().hide();
+                }
+            });
+        }
+
+        formacaoAcademicaAndamento.primeiroGrau();
+        //$("input[name=afcurso], #al_curso ,#formacaoAndamento>a, #al_bolsa, #abolsaRadioGroup, #al_agencia_financiadora,input[name=af_nme_agencia],#atitulo_monografia,  input[name=aftitulotese], #anome_orientador , input[name=afnomeorient], #formacaoAndamento table.sup tbody tr, #formacaoAndamento>.sup>tbody>tr>td>a ,input[name=acom_bolsa]").show();
+        //$("#formacaoAndamento table.sup tbody tr").hide();
+        //$("#formacaoAndamento table.sup tbody tr:eq(0)").show();
+        //$("#formacaoAndamento table.sup tbody tr:eq(1)").show();
+        //$("#formacaoAndamento table.sup tbody tr:eq(2)").show();
+        //$("#formacaoAndamento table.sup tbody tr:eq(3)").show();
+
+        //Mostrar campos de graduação (somente campo curso)
+        $("#formacao-andamento .esconde-graduacao:eq(0)").show();
+
+        adicionarAttrsJsonValidacao();
+        adicionarAttrsHtmlValidacao();
+        AdicionarEventoComBolsaValidacao();
+    },
+    esperaDisponibilidade: function () {
+        var select = $("select[name=fnivel_andamento]");
+        var $select = $(select);
+        var valorformacaoAcademicaAndamento = $select.find("option:selected").val();
+        if (valorformacaoAcademicaAndamento == "B") {
+            formacaoAcademicaAndamento.primeiroGrau();
+        }
+        else
+            if (valorformacaoAcademicaAndamento == "C") {
+                formacaoAcademicaAndamento.segundoGrau();
+            }
+            else
+                if (valorformacaoAcademicaAndamento == "1") {
+                    formacaoAcademicaAndamento.graduacao();
+                    $("#atitulo_monografia").html("Título da Monografia");
+                }
+                else
+                    if (valorformacaoAcademicaAndamento == "3") {
+                        formacaoAcademicaAndamento.graduacao();
+                        $("#atitulo_monografia").html("Título da dissertação/tese");
+                    }
+                    else
+                        if (valorformacaoAcademicaAndamento == "4") {
+                            formacaoAcademicaAndamento.graduacao();
+                            $("#atitulo_monografia").html("Título da dissertação/tese");
+                        }
+                        else
+                            if (valorformacaoAcademicaAndamento == "") {
+                                formacaoAcademicaAndamento.primeiroGrau();
+                                formacaoAcademicaAndamento.removerTodosAttrJsonValidacao();
+                                //$("#formacaoAndamento > table").find("input[name!=acom_bolsa]").val("");
+                                $("#formacao-andamento input[name!=acom_bolsa]").val("");
+
+                            }
+        formacaoAcademicaAndamento.esconderAgencia();
+    },
+    init: function () {
+        //SetTimeout para contornar bug no evento.
+        $(document).ready(function () {
+            setTimeout("$('select[name=fnivel_andamento]').change(formacaoAcademicaAndamento.esperaDisponibilidade)", 100);
+            setTimeout("formacaoAcademicaAndamento.popularCampos()", 100);
+            var optionSelecionadaVal = "";
+            //   if(optionSelecionadaVal=="B" || optionSelecionadaVal=="C" ||optionSelecionadaVal=="" ){
+            setTimeout("formacaoAcademicaAndamento.esperaDisponibilidade()", 1000);
+            //     }
+        });
+    }
+}
+formacaoAcademicaAndamento.init();
+
+dc = document.GN_CURSO_FORM;
+
+function cancelar() {
+
+    self.parent.modalCV3.removerModal();
+}
+function selecionar() {
+
+    var optionCursoSelecionado = $("select[name=f_curso] option:selected");
+    var padraoCursoVerdadeiro = /V/;
+    var cursoVerdadeiro = padraoCursoVerdadeiro.exec(optionCursoSelecionado.val());
+    var nomeDoCursoSelecionado = optionCursoSelecionado.text();
+    var cod_curso = optionCursoSelecionado.val().replace("V", "");
+    cod_curso = cod_curso.replace("D", "");
+
+    $("input[name=fcurso]").val(nomeDoCursoSelecionado);
+    if (cursoVerdadeiro) {
+        $("input[name=f_cod_curso]").val(cod_curso);
+    }
+    else {
+        $("input[name=f_cod_curso_outro]").val(cod_curso);
+    }
+    winSelecaoCurso.hide();
+
+}
+
+function novoCursoEstatico() {
+    var data = {
+        tipo: 'cadastro_curso',
+        url_action: 'prc_curso_outro',
+        f_nivel: $("select[name=fnivel] option:selected").val(),
+        f_inst: $("input[name=fcodinstform]").val(),
+        f_pgm: 'FORM',
+        f_sta_area: dc.f_sta_area.value,
+        f_cod: "E5538575P" // DADO MOCKADO, TEM QUE ALTERAR
+    }
+    winSelecaoCurso.request("proxy.php?param=" + encodeURIComponent(JSON.stringify(data)));
+    mudarAreaEstatico();
+}
+
+
+ds = document.GN_CURSO_OUTRO;
+
+function trim(str) {
+    i = 0;
+    while (((str.substring(i, i + 1)) == " ") && (i < str.length)) i++;
+    aux = str.substring(i, str.length); i = aux.length;
+    while (((aux.substring(i - 1, i)) == " ") && (i > 1)) i--;
+    aux = aux.substring(0, i);
+    return aux;
+}
+function cancelar() {
+    self.parent.modalCV3.removerModal();
+}
+var winSelecaoArea;
+function areaEstatico() {
+    var data = {
+        tipo: 'area',
+        url_action: 'prc_area_curso',
+        f_cod_rh: "E5538945U" // DADO MOCKADO, TEM QUE ALTERAR
+    }
+
+    winSelecaoArea = $.win({
+        url: "proxy.php?param=" + encodeURIComponent(JSON.stringify(data)),
+        loadingMessage:  "<h1>Carregando ...</h1>" +"<p>Essa janela existe no máximo por 60 segundos por causa da lentidão GIGANTESCA do servidor.</p><p>Em caso de erros, você receberá um aviso.</p>",
+        autoRemove: true,
+        width: 550
+    });
+    winSelecaoArea.show();
+    mudarExpandirAreaEstatico();
+}
+function mudarAreaEstatico(data) {
+    waitForObject('form[name=GN_CURSO_OUTRO]').then(el => {
+        el.find('a[href=#]').get(0).setAttribute('onclick', 'areaEstatico();return false;');
+    }).catch(err => {
+        console.error(err);
+    });
+}
+function check1() {
+    if (trim(ds.f_dsc_curso.value) == "") {
+        alert("Informe o nome do Curso");
+        ds.f_dsc_curso.focus();
+
+
+    } else if ((ds.f_area1.value == "") && (ds.f_area2.value == "")) {
+        alert("Informa a Área do conhecimento");
+
+    } else {
+        $("input[name=f_ctr]").val("I");
+        var parametros = $(ds).serializeArray();
+        escapeSerializedJSON(parametros);
+        winSelecaoCurso.request("pkg_cv_estr.PRC_CURSO_OUTRO", parametros);
+
+    }
+    return true;
+}
+
+function mudarExpandirAreaEstatico() {
+    waitForObject('form[name=AREA_CURSO]').then(el => {
+        var nameForm = el.get(0).getAttribute('name');
+        $('form[name="' + nameForm + '"]').siblings("a").each(function () {
+            var onclickFunction = $(this).attr('onclick');
+            $(this).attr('onclick', onclickFunction.replace("expandirArea(", "expandirAreaEstatico("));
+        });
+    }).catch(err => {
+        console.error(err);
+    });
+}
+function expandirAreaEstatico(url) {
+    var data = {
+        tipo: 'tipo_cadastro_curso',
+        url_action: 'PRC_AREA_CURSO',
+        dados: url.split("?")[1],
+        // f_gr: "",
+        // f_cod_rh: "E5538945U" // DADO MOCKADO, TEM QUE ALTERAR'
+    }
+    winSelecaoArea.request("proxy.php?param=" + encodeURIComponent(JSON.stringify(data)));
+
+    mudarIncluirEstatico();
+    mudarCheckEstatico();
+}
+
+function checkEstatico(cod, texto, tipo) {
+    if (tipo == 0) {
+        $("input[name=f_area1]").val(cod);
+        $("input[name=f_area2]").val(cod);
+    }
+    else {
+        $("input[name=f_area1]").val(cod);
+        $("input[name=f_area2]").val("");
+    }
+    $("select[name=f_area] option:selected").text(texto);
+    winSelecaoArea.hide();
+}
+
+function mudarCheckEstatico() {
+    waitForObject('form[name=AREA_CURSO]').then(el => {
+        var nameForm = el.get(0).getAttribute('name');
+        $('form[name="' + nameForm + '"]').siblings("a").each(function () {
+            var onclickFunction = $(this).attr('onclick');
+            if($(this).attr('href') == ""){
+                $(this).attr('onclick', onclickFunction.replace("check(", "checkEstatico("));
+                $(this).attr('onclick', onclickFunction.replace("incluir(", "incluirEstatico("));
+            } else {  
+                $(this).attr('onclick', onclickFunction.replace("expandirArea(", "expandirAreaEstatico("));
+            }
+        });
+    }).catch(err => {
+        console.error(err);
+    });
+}
+
+function incluirEstatico(gr, ar, sb, nivel) {
+    nova = "";
+    if (nivel == 1) {
+        nova = prompt("Informe a nova sub-área:", "");
+    }
+    else
+        if (nivel == 0) {
+            nova = prompt("Informe a nova especialidade:", "");
+        }
+
+    if (nova != null) {
+        if (trim(nova) != "") {
+            dc.f_ctr.value = "I";
+            dc.f_gr.value = gr;
+            dc.f_ar.value = ar;
+            dc.f_sb.value = sb;
+            dc.f_nme.value = trim(nova.toUpperCase());
+
+            var url = $(dc).serialize();
+            alert(url);
+            winSelecaoArea.request("pkg_cv_estr.prc_area_curso?" + url);
+        }
+    }
+}
+
+function mudarIncluirEstatico() {
+    waitForObject('form[name=AREA_CURSO]').then(el => {
+        var nameForm = el.get(0).getAttribute('name');
+        $('form[name="' + nameForm + '"]').siblings("a").each(function () {
+            var onclickFunction = $(this).attr('onclick');
+            $(this).attr('onclick', onclickFunction.replace("incluir(", "incluirEstatico("));
+        });
     }).catch(err => {
         console.error(err);
     });

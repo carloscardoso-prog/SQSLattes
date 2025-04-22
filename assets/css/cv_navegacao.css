@@ -1,0 +1,549 @@
+.navegacao {
+	height: auto !important;
+	width: 100% !important;
+	overflow-x: hidden !important;
+}
+.navegacao2 {
+	height: 293px !important;
+	overflow-x: hidden !important;
+	width: 100% !important;
+}
+.navegacao_peq {
+	background: none repeat scroll 0 0 #E1EAF3 !important;
+	height: auto !important;
+	width: 100% !important;
+}
+.areaSelecao {
+	background: none repeat scroll 0 0 #E1EAF2;
+	display: inline-block;
+	float: left !important;
+	position: relative !important;
+	width: 121px;
+}
+.areaSelecao a {
+	background: none repeat scroll 0 0 #C2D5E7 !important;
+	border-radius: 3px 0 0 3px !important;
+	box-shadow: 1px 1px 2px -1px #3E6F9B inset !important;
+	color: #244059 !important;
+	display: block !important;
+	font: 11px/22px arial !important;
+	height: 22px !important;
+	margin-bottom: 4px !important;
+	outline: 0 none !important;
+	text-decoration: none !important;
+	text-indent: 6px !important;
+	text-shadow: 0 1px 0 #FFFFFF !important;
+	width: auto !important;
+}
+.areaSelecao a:hover {
+	background: none repeat scroll 0 0 #A5C1DC !important;
+}
+.areaSelecao a.selecionado, .areaSelecao a.selecionado:hover {
+	background: none repeat scroll 0 0 #FFFFFF !important;
+	box-shadow: 1px 1px 1px 0 #888888 inset !important;
+	color: #000000 !important;
+	left: 0;
+	margin: 0 -1px 0 0;
+	position: relative;
+	text-shadow: none !important;
+}
+.areaSelecao a.toggleSeletor {
+	background:url(../imagens/navegacao_toggle.gif) !important;
+	border-left:1px solid #99BBE8 !important;
+}
+.areaSelecao a.toggleSeletor span.toggle {
+	display:block !important;
+	width:15px !important;
+	height:15px !important;
+	background:url(toggle_hide.gif) !important;
+	float:right !important;
+	margin-top:4px !important;
+	margin-right:3px;
+}
+.areaSelecao img {
+	float:left !important;
+	margin:15px 10px !important;
+	cursor:pointer !important;
+}
+.areaSelecao .left {
+	float:left;
+}
+.areaSelecao .right {
+	float:right;
+}
+.navegacao fieldset {
+	background-color: #FFFFFF !important;
+	border: medium none !important;
+	box-shadow: 0 1px 1px 0 #888888 inset !important;
+	display: inline-block !important;
+	float: right !important;
+	font: 11px arial !important;
+	margin: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	padding: 0;
+	position: absolute;
+	width: 100% !important;
+}
+.navegacao2 fieldset {
+	background-color: #FFFFFF !important;
+	border: medium none !important;
+	box-shadow: 0 1px 1px 0 #888888 inset !important;
+	display: inline-block !important;
+	float: right !important;
+	font: 11px arial !important;
+	margin: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	padding: 0;
+	position: absolute;
+	width: 100% !important;
+}
+.navegacao .tela_menor {
+	background-color: #FFFFFF !important;
+	box-shadow: 0 1px 1px 0 #888888 inset !important;
+	display: inline-block !important;
+	float: left !important;
+	font: 11px arial !important;
+	margin: 0 0 10px !important;
+	height: 100% important;
+	max-height: 410px;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	position: relative !important;
+	width: 100% !important;
+}
+.navegacao2 .tela_menor {
+	background-color: #FFFFFF !important;
+	box-shadow: 0 1px 1px 0 #888888 inset !important;
+	display: inline-block !important;
+	float: left !important;
+	font: 11px arial !important;
+	margin: 0 0 10px !important;
+	max-height: 410px;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	position: relative !important;
+	width: 100% !important;
+}
+.tela_menor .conteudo {
+	max-width: 480px !important;
+	min-width: 430px !important;
+	padding: 5px;
+}
+.navegacao fieldset div.scroller {
+	float: left !important;
+	height: 100% !important;
+	margin-right: 5px !important;
+	margin-top: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	width: 620px;
+}
+.navegacao2 fieldset div.scroller {
+	float: left !important;
+	height: 100% !important;
+	margin-right: 5px !important;
+	margin-top: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	width: 620px;
+}
+.navegacao .tela_menor div.scroller {
+	float: left !important;
+	height: 100% !important;
+	margin-right: 5px !important;
+	margin-top: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	width: 440px !important;
+}
+.navegacao2 .tela_menor div.scroller {
+	float: left !important;
+	height: 100% !important;
+	margin-right: 5px !important;
+	margin-top: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	width: 440px !important;
+}
+.navegacao fieldset div.scroller_peq {
+	float: left !important;
+	height: 100% !important;
+	margin-right: 5px !important;
+	margin-top: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	width: 440px !important;
+}
+.navegacao fieldset2 div.scroller_peq {
+	float: left !important;
+	height: 100% !important;
+	margin-right: 5px !important;
+	margin-top: 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	width: 440px !important;
+}
+.navegacao fieldset div.scroller2 {
+	height:100% !important;
+	width:100% !important;
+	float:left !important;
+	overflow:auto !important;
+	margin-right:5px !important;
+	margin-top:0px;
+}
+.navegacao2 fieldset div.scroller2 {
+	height:100% !important;
+	width:100% !important;
+	float:left !important;
+	overflow:auto !important;
+	margin-right:5px !important;
+	margin-top:0px;
+}
+.navegacao fieldset div.scroller div.conteudo {
+	margin:0 !important;
+}
+.navegacao2 fieldset div.scroller div.conteudo {
+	margin:0 !important;
+}
+.navegacao fieldset legend {
+	margin:0 !important;
+	padding:0 !important;
+	font-weight:bold !important;
+	display:none;
+}
+.navegacao2 fieldset legend {
+	margin:0 !important;
+	padding:0 !important;
+	font-weight:bold !important;
+	display:none;
+}
+.navegacao fieldset label {
+	display:block !important;
+	font:normal 11px arial, helvetica, verdana !important;
+	color:#888;
+}
+.navegacao2 fieldset label {
+	display:block !important;
+	font:normal 11px arial, helvetica, verdana !important;
+	color:#888;
+}
+.navegacao fieldset label.label-texto,
+.navegacao2 fieldset label.label-texto {
+	color: #000;
+	display: inline !important;
+}
+.navegacao fieldset input[type="text"] {
+	border: 1px solid #555555;
+	border-radius: 4px 4px 4px 4px;
+	font: 11px arial, helvetica, verdana;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 4px 2px;
+}
+.navegacao2 fieldset input[type="text"] {
+	border: 1px solid #555555;
+	border-radius: 4px 4px 4px 4px;
+	font: 11px arial, helvetica, verdana;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 4px 2px;
+}
+.navegacao fieldset input[type="text"]:focus {
+	border: 1px solid #0066FF !important;
+	box-shadow: 0 0 2px #999999 inset !important;
+}
+.navegacao2 fieldset input[type="text"]:focus {
+	border: 1px solid #0066FF !important;
+	box-shadow: 0 0 2px #999999 inset !important;
+}
+textarea {
+	border: 1px solid Gray;
+	border-radius: 4px 4px 4px 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 5px;
+}
+textarea:focus {
+	border: 1px solid #0066FF !important;
+	box-shadow: 0 0 2px #999999 inset !important;
+}
+.navegacao fieldset select {
+	border-radius: 4px 4px 4px 4px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 3px;
+}
+.navegacao2 fieldset select {
+	border-radius: 4px 4px 4px 4px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 3px;
+}
+.navegacao .tela_menor select {
+	border-radius: 4px 4px 4px 4px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	max-width: 420px !important;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+}
+.navegacao2 .tela_menor select {
+	border-radius: 4px 4px 4px 4px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	max-width: 420px !important;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+}
+.navegacao fieldset select:focus {
+	border: 1px solid #0066FF !important;
+	box-shadow: 0 0 2px #999999 inset !important;
+}
+.navegacao2 fieldset select:focus {
+	border: 1px solid #0066FF !important;
+	box-shadow: 0 0 2px #999999 inset !important;
+}
+.navegacao fieldset em {
+    border-bottom: 2px solid #D1E0F5 !important;
+    color: #3764A0 !important;
+    display: block !important;
+    font: bold 11px arial,helvetica,verdana !important;
+    margin: 12px 0 12px 12px !important;
+    min-height: 15px;
+    padding: 0 !important;
+    width: 98%;
+}
+.navegacao2 fieldset em {
+	display:block !important;
+	border-bottom:2px solid #D1E0F5 !important;
+	padding:0 0 2px 5px !important;
+	font:bold 11px arial, helvetica, verdana !important;
+	color:#3764A0 !important;
+	margin-bottom:5px !important;
+	margin-top:5px !important;
+	margin-left:5px !important;
+	margin-right:5px !important;
+}
+.navegacao .controle {
+	background-color: #E1EAF3 !important;
+	bottom: 0;
+	clear: both !important;
+	height: 30px !important;
+	padding-bottom: 0 !important;
+	padding-top: 5px !important;
+	position: absolute;
+	text-align: right !important;
+	width: 100% !important;
+}
+.navegacao2 .controle {
+	background-color: #E1EAF3 !important;
+	bottom: 0;
+	clear: both !important;
+	height: 30px !important;
+	padding-bottom: 0 !important;
+	padding-top: 5px !important;
+	position: absolute;
+	text-align: right !important;
+	width: 100% !important;
+}
+.navegacao .controle_peq {
+	background-color: #E1EAF3 !important;
+	bottom: 0;
+	clear: both !important;
+	height: 30px !important;
+	padding-bottom: 0 !important;
+	padding-top: 5px !important;
+	position: absolute;
+	text-align: right !important;
+	width: 100% !important;
+}
+.navegacao2 .controle_peq {
+	background-color: #E1EAF3 !important;
+	bottom: 0;
+	clear: both !important;
+	height: 38px !important;
+	left: 9px;
+	margin-left: 0;
+	padding-bottom: 0 !important;
+	padding-top: 5px !important;
+	position: absolute;
+	text-align: right !important;
+	width: 499px !important;
+}
+.navegacao .scroller_tabela {
+	border: 1px solid #AAAAAA;
+	height: 310px;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: auto !important;
+}
+.navegacao2 .scroller_tabela {
+	border: 1px solid #AAAAAA;
+	height: 310px;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: auto !important;
+}
+.conteudo table {
+	width: 100% !important;
+	margin: 0;
+}
+* html .navegacao .controle {
+	float:none;
+}
+.toggled {
+	width:22px !important;
+	float:left;
+}
+.toggled a {
+	display:none !important;
+}
+.toggled a.toggleSeletor {
+	display:block !important;
+}
+.toggled a.toggleSeletor span.toggle {
+	background:url(../imagens/toggle_show.gif)
+}
+.expanded fieldset {
+	margin-left:22px !important;
+}
+.holder {
+	width:95% !important;
+	margin:5px auto !important;
+	font:bold 11px arial !important;
+	color:#3764A0 !important;
+	margin-left:5px !important;
+	margin-top:5px !important;
+	margin-bottom:5px !important;
+}
+.pad {
+	padding:7px 15px !important;
+	font:normal 11px arial !important;
+	color:#333;
+}
+.filter .holder {
+	margin: 13px 0 0 !important;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	width: 687px !important;
+}
+.filter {
+	background-color: #FFFFFF;
+	border: 1px solid #AAAAAA;
+	border-collapse: collapse;
+	height: auto;
+	margin: 5px;
+	table-layout: fixed;
+	width: 100%;
+}
+.filter th {
+	background: none repeat scroll 0 0 #FFFFFF !important;
+	color: #3764A0 !important;
+	font: bold 11px/16px verdana;
+	padding: 1px;
+	text-align: center;
+}
+/* Table - TD */
+
+.td_importar {
+	font:normal 11px arial, helvetica, verdana !important;
+	text-align:center !important;
+	border-left: double #999 !important;
+}
+/*Grid - TR*/
+
+.odd {
+	background: none repeat scroll 0 0 #EEEEEE;
+}
+/*CorreÃ§Ã£o - Input - EspaÃ§amento*/
+
+#abas {
+	margin-left: 5px;
+}
+/*PosiÃ§Ã£o -  lupa*/
+
+img[src="/images/curriculo/v2/cabecalho/lupa2.gif"] {
+	float: right;
+	position: relative;
+	right: 16px;
+	top: -22px;
+}
+/*Inicio - Novos botÃµes - Lattes*/
+.botao {
+	position: relative;
+	right: -2px;
+	top: 6px;
+}
+.botao a {
+	background: none repeat scroll 0 0 #43A7DC;
+	border-radius: 4px 4px 4px 4px;
+	color: #FFFFFF !important;
+	font-family: tahoma !important;
+	font-size: 13px !important;
+	margin: 4px;
+	padding: 2px 11px 4px 12px;
+	text-decoration: none !important;
+}
+.botao a:hover {
+	background: none repeat scroll 0 0 #69D0E7;
+}
+span.botao span {
+	background-image: url("../imagens/sprite-icons-bts.gif");
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 15px;
+	margin-left: -7px;
+	margin-right: 5px;
+	margin-top: 0;
+	outline: medium none;
+	vertical-align: middle;
+	width: 14px;
+}
+span.salvar span {
+	background-position: -126px 0;
+}
+span.excluir span {
+	background-position: -140px 0;
+}
+span.login span {
+	background-position: -168px 0;
+}
+span.logoff span {
+	background-position: -182px 0;
+}
+span.anexar span {
+	background-position: -98px 0;
+}
+span.home span {
+	background-position: -14px 0;
+}
+span.down span {
+	background-position: -42px 0;
+}
+span.list span {
+	background-position: -56px 0;
+}
+span.right span {
+	background-position: -84px 0;
+}
+span.sig span {
+	background-position: -238px 0;
+}
+span.set span {
+	background-position: -70px 0;
+}
+span.voltar span {
+	background-position: 0 0;
+}
+span.voltar span {
+	background-position: 0 0;
+}
+span.procurar span {
+	background-position: -322px 0;
+}
+
+/*Fim - Novos botÃµes  - Lattes*/
